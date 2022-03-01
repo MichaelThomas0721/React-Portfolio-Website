@@ -39,5 +39,6 @@ export const things =
     'POWER',
     'RIGHT',
     'CIVIL',
-    'PRINT'
+    'PRINT',
+    'ANVIL'
 ]
