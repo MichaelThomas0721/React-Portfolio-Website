@@ -1,7 +1,4 @@
 import styles from "../styles/projects.module.css";
-import WallPaper from "./../public/Images/WallPaper.gif";
-import StockBot from "./../public/Images/StockBot.gif";
-import WackyWords from "./../public/Images/WackyWords.gif";
 import Image from "next/image";
 
 export const Projects = () => {
@@ -15,9 +12,8 @@ export const Projects = () => {
 
       <div id={styles.firstIContainer} className={styles.imageContainers}>
         <a href="WackyWords">
-          <Image
-            loader={myLoader}
-            src={WackyWords}
+          <img
+            src={"/WackyWords.gif"}
             alt="Project 1"
             className={styles.pImages}
           />
@@ -59,9 +55,8 @@ export const Projects = () => {
 
       <div id={styles.secondIContainer} className={styles.imageContainers}>
         <a href="StreamDeck">
-          <Image
-            loader={myLoader}
-            src={WallPaper}
+          <img
+            src={"/WallPaper.gif"}
             alt="Project 2"
             className={styles.pImages}
           />
@@ -103,9 +98,8 @@ export const Projects = () => {
 
       <div id={styles.thirdIContainer} className={styles.imageContainers}>
         <a href="https://github.com/MichaelThomas0721/Discord-Stock-Bot">
-          <Image
-            loader={myLoader}
-            src={StockBot}
+          <img
+            src={"/StockBot.gif"}
             alt="Project 3"
             className={styles.pImages}
           />
