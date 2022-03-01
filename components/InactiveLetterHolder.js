@@ -1,4 +1,4 @@
-import Letter from "./inactiveLetter";
+import Letter from "./InactiveLetter";
 import React, { useEffect, useState, useRef } from "react";
 
 export default function InactiveLetterHolder(props) {
