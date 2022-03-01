@@ -7,7 +7,7 @@ export default function StreamDeck() {
 
   function FileUpload() {
     //const url = 'http://localhost:4269/greeting';
-    const url = "http://michaelthomastech.ca:4269/greeting";
+    const url = "https://michaelthomastech.ca:4269/greeting";
     const formData = new FormData();
     formData.append("file", file);
     const config = {
