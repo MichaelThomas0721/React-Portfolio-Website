@@ -15,6 +15,7 @@ export default function StreamDeck() {
       headers: {
         "content-type": "multipart/form-data",
         "Access-Control-Allow-Origin": "true",
+        "rejectUnauthorized": "false"
       },
     };
 
