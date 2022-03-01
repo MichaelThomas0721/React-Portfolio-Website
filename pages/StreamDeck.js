@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+const https = require('https');
 import styles from "./../styles/streamdeck.module.css";
 
 export default function StreamDeck() {
@@ -18,6 +19,9 @@ export default function StreamDeck() {
         "rejectUnauthorized": "false"
       },
     };
+    const agent = new https.Agent({  
+      rejectUnauthorized: false
+    });
 
     if (file) {
       const plsWait = document.getElementById("waitHeader");
@@ -26,7 +30,7 @@ export default function StreamDeck() {
       plsUpload.style.display = "none";
 
       axios
-        .post(url, formData, config)
+        .post(url, formData, config, { httpsAgent: agent })
         .then((response) => {
           const url = window.URL.createObjectURL(
             new Blob([response.data], { type: "application/zip" })
