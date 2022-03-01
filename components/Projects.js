@@ -1,7 +1,7 @@
 import styles from "../styles/projects.module.css"
-import WallPaper from "../public/Images/WallPaper.gif";
-import StockBot from "../public/Images/StockBot.gif";
-import AutoProject from "../public/Images/autoProject.gif";
+import WallPaper from "./../public/Images/WallPaper.gif";
+import StockBot from "./../public/Images/StockBot.gif";
+import AutoProject from "./../public/Images/autoProject.gif";
 import Image from 'next/image';
 
 export const Projects = () => {
