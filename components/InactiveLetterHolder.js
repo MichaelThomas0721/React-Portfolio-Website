@@ -5,7 +5,6 @@ export default function InactiveLetterHolder(props) {
   const corrects = props.corrects;
   const values = props.values;
 
-  console.log(corrects);
   var letters = [
     <Letter
       corrects={corrects}
