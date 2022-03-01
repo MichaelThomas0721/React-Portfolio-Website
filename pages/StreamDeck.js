@@ -16,12 +16,11 @@ export default function StreamDeck() {
       headers: {
         "content-type": "multipart/form-data",
         "Access-Control-Allow-Origin": "true",
-        "rejectUnauthorized": "false"
+        httpsAgent: new https.Agent({  
+          rejectUnauthorized: false
+        })
       },
     };
-    const agent = new https.Agent({  
-      rejectUnauthorized: false
-    });
 
     if (file) {
       const plsWait = document.getElementById("waitHeader");
@@ -30,7 +29,7 @@ export default function StreamDeck() {
       plsUpload.style.display = "none";
 
       axios
-        .post(url, formData, config, { httpsAgent: agent })
+        .post(url, formData, config)
         .then((response) => {
           const url = window.URL.createObjectURL(
             new Blob([response.data], { type: "application/zip" })
