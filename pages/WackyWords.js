@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
-import LetterHolder from "./../components/letterHolder";
-import InactiveLetterHolder from "./../components/inactiveLetterHolder";
+import LetterHolder from "./../components/LetterHolder";
+import InactiveLetterHolder from "./../components/InactiveLetterHolder";
 import { wordList } from "./../contrants/wordBank";
 import { things } from "./../contrants/answers";
 
