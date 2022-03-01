@@ -1,0 +1,12 @@
+.modelItem {
+    color: #45A29E;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.modelItemContainer {
+    height: 100%;
+    width: auto;
+}

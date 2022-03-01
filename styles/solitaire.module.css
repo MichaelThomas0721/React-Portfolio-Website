@@ -1,0 +1,236 @@
+#mainContainer {
+    display: grid;
+    grid-template-areas:
+    "Deck Waste . Spades Hearts Diamonds Clubs"
+    "First Second Third Fourth Fifth Sixth Seventh";
+    grid-template-columns: repeat(7, 200px);
+    grid-template-rows: 300px auto;
+    width: 100%;
+    height: 100vh;
+    background: green;
+}
+
+#deck {
+   list-style-type:none;
+   grid-area: Deck;
+   display: grid;
+}
+
+#deck li {
+    position: absolute;
+}
+
+#waste {
+    list-style-type:none;
+   grid-area: Waste;
+   display: inline-block;
+}
+
+#waste li {
+    position: absolute;
+}
+
+#spades {
+    list-style-type:none;
+   grid-area: Spades;
+   background: blue;
+   border-radius: 20px;
+}
+
+#spades li{
+    position: absolute;
+}
+
+#hearts {
+    list-style-type:none;
+   grid-area: Hearts;
+   background: blue;
+   border-radius: 20px;
+}
+
+#hearts li{
+    position: absolute;
+}
+
+#diamonds {
+    list-style-type:none;
+   grid-area: Diamonds;
+   background: blue;
+   border-radius: 20px;
+}
+
+#diamonds li{
+    position: absolute;
+}
+
+#clubs {
+    list-style-type:none;
+   grid-area: Clubs;
+   background: blue;
+   border-radius: 20px;
+}
+
+#clubs li{
+    position: absolute;
+}
+
+#table1 {
+    list-style-type:none;
+   grid-area: First;
+}
+
+#table1 li:not(:nth-child(1)) {
+    margin-top: var(--cardSpacing);
+}
+
+#table2 {
+    list-style-type:none;
+   grid-area: Second;
+}
+
+#table2 li:not(:nth-child(1)) {
+    margin-top: var(--cardSpacing);
+}
+
+#table3 {
+    list-style-type:none;
+   grid-area: Third;
+}
+
+#table3 li:not(:nth-child(1)) {
+    margin-top: var(--cardSpacing);
+}
+
+#table4 {
+    list-style-type:none;
+   grid-area: Fourth;
+}
+
+#table4 li:not(:nth-child(1)) {
+    margin-top: var(--cardSpacing);
+}
+
+#table5 {
+    list-style-type:none;
+   grid-area: Fifth;
+}
+
+#table5 li:not(:nth-child(1)) {
+    margin-top: var(--cardSpacing);
+}
+
+#table6 {
+    list-style-type:none;
+   grid-area: Sixth;
+}
+
+#table6 li:not(:nth-child(1)) {
+    margin-top: var(--cardSpacing);
+}
+
+#table7 {
+    list-style-type:none;
+   grid-area: Seventh;
+}
+
+#table7 li:not(:nth-child(1)) {
+    margin-top: var(--cardSpacing);
+}
+
+.bottomCards {
+    list-style-type: none;
+    width: 10.7rem;
+    height: 15.4rem;
+}
+
+.cardBack {
+    height: 15.4rem;
+    width: 10.7rem;
+    aspect-ratio: 8/11;
+    background-color: white;
+    background-image: url("../../Images/cardBack.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    display: block;
+}
+
+.cardBack div {
+    display: none;
+}
+
+.cardUp {
+    height: 15.4rem;
+    width: 10.7rem;
+    aspect-ratio: 8/11;
+    background-color: white;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    display: block;
+    position: relative;
+}
+.topLeft{
+    display: block;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    width: 10%;
+    margin-top: 0;
+}
+
+.bottomRight {
+    display: block;
+    height: 50%;
+    position: absolute;
+    right: 10px;
+    width: 10%;
+    bottom: 0;
+}
+
+.topLeftRank{
+    line-height: 1;
+    text-align: center;
+    grid-area: RankL;
+}
+
+.bottomRightRank{
+    line-height: 1;
+    text-align: center;
+    grid-area: RankR;
+}
+
+.topLeftSuitCon{
+    padding: 0;
+    margin: 0;
+    top: 0;
+    font-size: 40px;
+}
+
+.bottomRightSuitCon{
+    padding: 0;
+    margin: 0;
+    top: 0;
+    font-size: 40px;
+}
+
+.Spades {
+    position: relative;
+    height: 100%;
+    color: black;
+}
+
+.Hearts {
+    height: 100%;
+    color: red;
+}
+
+.Diamonds {
+    height: 100%;
+    color: red;
+}
+
+.Clubs {
+    height: 100%;
+    color: black;
+}

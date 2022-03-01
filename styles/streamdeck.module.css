@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+.parentBox {
+  align-items: center;
+  justify-content: center;
+  display: block;
+  background: var(--darkGrey);
+  height: 100vh;
+}
+
+.WallpaperHeader {
+  color: var(--color-blue);
+  font-size: 45px;
+  margin-bottom: 0px;
+  font-weight: 900;
+  margin:auto;
+  width: fit;
+  text-align: center;
+}
+
+.fileBox{
+    background-color: #c5c6c7;
+    max-width: 600px;
+    height: 500px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: larger;
+}
+
+.fileBox h3 {
+  font-weight: bolder;
+}
+
+.drag_area{
+    height: 90%;
+    border: 3px dashed #e3e3e3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ .drag_area .icon {
+     font-size: 50px;
+     color: #1683ff;
+ }
+
+ .drag_area .header {
+     font-size: 20px;
+     font-weight: 500;
+     color: #34495e;
+ }
+
+ .drag_area .button{
+     font-size: 20px;
+     font-weight: 500;
+     color: #1683ff;
+     cursor: pointer;
+ }
+
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: "Select some files";
+  display: inline-block;
+  background: linear-gradient("to bottom", #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+.custom-file-input:hover::before {
+  border-color: black;
+}
+.custom-file-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+.submitGifButton {
+  position: relative;
+  height: 60px;
+  margin: 20px;
+  line-height: 60px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-black-1);
+  background-color: var(--color-black-3);
+  transition: var(--speed-normal);
+  border: 1px solid var(--color-black-3);
+}
+.submitGifButton:hover {
+    border: 1px solid transparent;
+    background: var(--color-red) url(https://i.postimg.cc/wBXGXbWN/pixel.png);
+    transition-delay: var(--speed-fast);
+    background-size: 180px;
+    animation: animate var(--speed-fast) steps(8) forwards;
+    border: 1px solid var(--color-red);
+  }
+@keyframes animate {
+  0% {
+    background-position-y: 0;
+  }
+  100% {
+    background-position-y: -480px;
+  }
+}
+
+.buttonContainer {
+  width: fit-content;
+  margin: auto;
+}

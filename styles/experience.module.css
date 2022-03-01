@@ -1,0 +1,89 @@
+.experienceContainer {
+  width: 100%;
+}
+
+.ExperienceTabs {
+  width: 100%;
+  max-width: 660px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+  grid-template-rows: 20px 5px 100px;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Left Middle Right"
+    "Indicator Indicator Indicator"
+    "Content Content Content";
+}
+
+.ExperienceTabs input[type="radio"] {
+  display: none;
+}
+
+.ExperienceTabs label {
+  color: var(--teal);
+  font-weight: bold;
+  margin: auto;
+}
+
+.ExperienceTabs .tab {
+  width: 100%;
+  background: var(--grey);
+  color: #ffffff;
+  display: none;
+  grid-area: Content;
+  height: 200px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  text-align: center;
+  line-height: 2.0;
+}
+
+.ExperienceTabs .tab h3 {
+  font-size: larger;
+  font-weight: 700;
+}
+
+.ExperienceTabs input[type="radio"]:checked + label + .tab{
+  display: block;
+}
+
+.ExperienceHeader {
+  color: var(--teal);
+  font-size: 50px;
+  padding-top: 200px;
+  margin: auto;
+  width: fit-content;
+}
+
+.ExperienceTabs .tab_indicator {
+  position: relative;
+  width: calc(100% / 3);
+  height: 5px;
+  background: var(--teal);
+  left: 0px;
+  grid-area: Indicator;
+  transition: all 0.5s ease;
+}
+
+.ExperienceTabs .highlight_indicator {
+  width: calc(100% / 3);
+  height: 5px;
+  background: var(--darkTeal);
+  left: 0px;
+  grid-area: Indicator;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+#tabCon {
+  grid-area: Left;
+}
+
+#tabTut {
+  grid-area: Middle;
+}
+
+#tabGolf {
+  grid-area: Right;
+}

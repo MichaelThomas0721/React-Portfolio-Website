@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+  
+.contactContainer {
+    width: 100%;
+}
+
+.contactContainer p {
+    padding: 10px;
+}
+
+#textContainer {
+    width: 100%;
+    margin-top: 25vh;
+    color: #C5C6C7;
+    text-align: center;
+}
+
+#contactHeader { 
+    color: var(--teal);
+}
+
+#contactSpan{
+    position: relative;
+    display: inline-flex;
+    width: 180px;
+    height: 55px;
+    margin: 0 15px;
+    perspective: 1000px;
+}
+
+#contactA {
+    font-size: 19px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.5s ease;
+}
+
+#contactA:before,
+#contactA:after {
+    position: absolute;
+    content: "EMAIL";
+    height: 55px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid var(--darkTeal);
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+#contactA:before{
+    color: #fff;
+    background: var(--darkTeal);
+    transform: rotate(0deg) translateZ(25px);
+}
+#contactA:after{
+    color: var(--darkTeal);
+    transform: rotateX(90deg) translateZ(25px);
+}
+
+#contactA:hover{
+    transform: translateZ(-25px) rotateX(-90deg);
+}

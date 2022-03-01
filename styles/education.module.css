@@ -1,0 +1,97 @@
+.educationContainer {
+    width: 100%;
+    min-height: min-content;
+    font-family: var(--theFont);
+}
+
+.EducationTabs{
+    width: 100%;
+    max-width: 660px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: minmax(30px, 30px) auto minmax(30px, 30px);
+    gap: 0px 0px;
+    grid-template-areas:
+    "Left Middle Right"
+}
+
+.EducationTabs input[type="radio"] {
+    display: none;
+}
+
+.EducationTabs label {
+    color: white;
+    height: auto;
+    font-weight: bold;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+.EducationTabs .tab{
+    width: 100%;
+    height: 300px;
+    max-width: 600px;
+    background: #fff;
+    display:none;
+}
+
+.EducationTabs input[type="radio"]:checked + label + .tab{
+    display: block;
+}
+
+.EducationHeader {
+    color: var(--teal);
+    font-size: 50px;
+    padding-top: 200px;
+    margin: auto;
+    width: fit-content;
+}
+
+.secTab {
+    grid-area: Left;
+    background: var(--grey);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-align: center;
+}
+
+.postTab{
+    grid-area: Right;
+    background: var(--darkTeal);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: center;
+}
+
+.tab {
+    grid-area: Middle;
+}
+
+#secData {
+    color: #ffffff;
+    background: var(--grey);
+    text-align: center;
+}
+
+#secData h1 {
+    font-size: larger;
+    font-weight: 600;
+}
+
+#secData p {
+line-height: 2.0;
+}
+
+#postData {
+    background: var(--darkTeal);
+    text-align: center;
+}
+
+#postData h1 {
+    font-size: larger;
+    font-weight: 600;
+}
+
+#postData p {
+line-height: 2.0;
+}

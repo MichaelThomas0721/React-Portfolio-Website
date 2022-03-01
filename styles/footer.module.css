@@ -1,0 +1,20 @@
+#footerContainer{
+    margin: auto;
+    align-self: auto;
+    align-items: center;
+    width: fit-content;
+}
+  
+#footerText {
+    color: var(--lightTeal);
+    font-size: 15px;
+    padding: 20px;
+    text-decoration: none;
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+}
+
+#footerText:hover {
+color: var(--darkTeal);
+}

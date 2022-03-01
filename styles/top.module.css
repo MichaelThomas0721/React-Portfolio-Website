@@ -1,0 +1,35 @@
+/*
+#topContainer {
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: 40px auto; 
+    grid-template-rows: min-content min-content min-content; 
+    grid-template-areas: 
+    "MyNameIs MyNameIs"
+    "Name Name"
+    "Typing Typing";
+
+}
+*/
+.myNameIs {
+  text-align: left;
+  margin-top: 30vh;
+  color: #c5c6c7;
+  font-size: 15px;
+  margin-bottom: 0px;
+  grid-area: MyNameIs;
+  
+}
+
+.name {
+    text-align: left;
+  color: var(--lightTeal);
+  font-size: 50px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  grid-area: Name;
+}
+
+#typing {
+  grid-area: Typing;
+}
