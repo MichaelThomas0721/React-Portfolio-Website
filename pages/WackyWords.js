@@ -3,6 +3,7 @@ import LetterHolder from "./../components/LetterHolder";
 import InactiveLetterHolder from "./../components/InactiveLetterHolder";
 import { wordList } from "./../contrants/wordBank";
 import { things } from "./../contrants/answers";
+import Keyboard from "./../components/Keyboard";
 
 export default function WackyWords() {
   const answer = useRef(
@@ -253,6 +254,9 @@ export default function WackyWords() {
           <LetterHolder  userWord={userInput} event={useRef()} />
         </div>
         {oldWords}
+      </div>
+      <div className="right-1/2 translate-x-1/2 bottom-10 m-auto w-fit fixed">
+        <Keyboard/>
       </div>
     </div>
   );
