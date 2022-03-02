@@ -65,6 +65,8 @@ export default function WackyWords() {
   function newGame() {
     var btn = document.getElementById("generateWord");
     var popUp = document.getElementById("popUp");
+    var uBox = document.getElementById("userInputBox");
+    uBox.classList.remove("invisible");
     popUp.classList.add("invisible");
     btn.classList.add("invisible");
     changeWord();
@@ -154,6 +156,8 @@ export default function WackyWords() {
     popUp.classList.remove("invisible");
     var btn = document.getElementById("generateWord");
     btn.classList.remove("invisible");
+    var uBox = document.getElementById("userInputBox");
+    uBox.classList.add("invisible");
   }
 
   useEffect(() => {
@@ -242,7 +246,12 @@ export default function WackyWords() {
       </div>
 
       <div className="m-auto w-min pt-80">
-        <LetterHolder userWord={userInput} event={childFunc} />
+        <div className="fixed" id="userInputBox">
+          <LetterHolder userWord={userInput} event={childFunc} />
+        </div>
+        <div className="invisible">
+          <LetterHolder  userWord={userInput} event={useRef()} />
+        </div>
         {oldWords}
       </div>
     </div>
