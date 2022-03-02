@@ -21,7 +21,6 @@ export default function WackyWords() {
   const defaultTime = 90000;
   const endTime = useRef(0);
   const [time, setTime] = useState(defaultTime);
-
   const [timerOn, setTimerOn] = useState(false);
   const answerEmojis = useRef("");
   const childFunc = useRef(null);
@@ -34,7 +33,7 @@ export default function WackyWords() {
         ("0" + ((endTime.current / 10 - 1) % 100)).slice(-2),
         "/90.00\n\n"
       );
-    else emojis = emojis.concat("X/45.00 \n");
+    else emojis = emojis.concat("X/90.00 \n");
     for (let i = 0; i < data.current.length; i++) {
       let word = data.current[i];
       let layer = "";
@@ -86,8 +85,11 @@ export default function WackyWords() {
   function updateWordAnswer() {
     if (userInput.length == 5) {
       let wordT = userInput.join("").toLowerCase();
-      if (wordList[userInput[0].toLowerCase()].includes(wordT)) {
+      if (!wordList[userInput[0].toLowerCase()].includes(wordT)){
         changeError(true);
+      }
+      else {
+        changeError(false);
         let temp = [];
         let tracker = true;
         for (let lett in userInput) {
@@ -127,19 +129,31 @@ export default function WackyWords() {
             .reverse()
         );
         if (tracker) {
-          setTimerOn(false);
-          completed.current = true;
-          setGameWin("Won");
-          changeError(true);
-          var popUp = document.getElementById("popUp");
-          popUp.classList.remove("invisible");
-          var btn = document.getElementById("generateWord");
-          btn.classList.remove("invisible");
+          changePopUp("Won");
         }
-      } else {
-        changeError(false);
       }
     }
+  }
+
+  function changeError(seen) {
+    var popup = document.getElementById("notInWordBank");
+    if (!seen) {
+      popup.classList.add("invisible");
+    } else {
+      popup.classList.remove("invisible");
+      popup.classList.add("animate-fade");
+    }
+  }
+
+  function changePopUp(wonStatus){
+    setTimerOn(false);
+    completed.current = true;
+    changeError(false);
+    setGameWin(wonStatus);
+    var popUp = document.getElementById("popUp");
+    popUp.classList.remove("invisible");
+    var btn = document.getElementById("generateWord");
+    btn.classList.remove("invisible");
   }
 
   useEffect(() => {
@@ -168,17 +182,7 @@ export default function WackyWords() {
     });
   }, []);
 
-  function changeError(changeTo) {
-    var popup = document.getElementById("notInWordBank");
-    if (changeTo) {
-      popup.classList.add("invisible");
-    } else {
-      popup.classList.remove("invisible");
-      popup.classList.add("animate-fade");
-    }
-  }
-
-  React.useEffect(() => {
+  useEffect(() => {
     let interval = null;
 
     if (timerOn) {
@@ -188,12 +192,7 @@ export default function WackyWords() {
         if (time <= 0) {
           setTimerOn(false);
           setTime(0);
-          var popUp = document.getElementById("popUp");
-          popUp.classList.remove("invisible");
-          var btn = document.getElementById("generateWord");
-          btn.classList.remove("invisible");
-          changeError(true);
-          completed.current = true;
+          changePopUp("Lost");
         }
       }, 10);
     } else {
@@ -212,9 +211,14 @@ export default function WackyWords() {
         <h1 className="m-auto text-xl">
           You {gameWin} the Wacky Word of {answer.current}
         </h1>
-        <button onClick={generateEmojis} className="bg-teal rounded p-1 w-fit m-auto basis-full">Share?</button>
+        <button
+          onClick={generateEmojis}
+          className="bg-teal rounded p-1 w-fit m-auto basis-full"
+        >
+          Share?
+        </button>
       </div>
-      
+
       <div
         className="m-auto w-fit h-fit bg-red-500/90 rounded p-3 fixed text-zinc-300 inset-x-44 top-72 invisible"
         id="notInWordBank"
