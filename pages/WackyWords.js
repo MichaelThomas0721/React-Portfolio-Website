@@ -17,8 +17,8 @@ export default function WackyWords() {
   const data = useRef([]);
   const [oldWords, setOldWords] = useState();
   const completed = useRef(false);
-  const gameWin = useRef("lost");
-  const defaultTime = 45000;
+  const [gameWin, setGameWin] = useState("lost");
+  const defaultTime = 90000;
   const endTime = useRef(0);
   const [time, setTime] = useState(defaultTime);
 
@@ -30,9 +30,9 @@ export default function WackyWords() {
     let emojis = "Wacky Words ";
     if (endTime.current > 0)
       emojis = emojis.concat(
-        ("0" + Math.floor((endTime.current / 1000) % 60)).slice(-2) + ":",
+        ("0" + Math.floor((endTime.current / 1000) % 100)).slice(-2) + ":",
         ("0" + ((endTime.current / 10 - 1) % 100)).slice(-2),
-        "/45.00\n\n"
+        "/90.00\n\n"
       );
     else emojis = emojis.concat("X/45.00 \n");
     for (let i = 0; i < data.current.length; i++) {
@@ -76,7 +76,7 @@ export default function WackyWords() {
     }
     childFunc.current();
     completed.current = false;
-    gameWin.current = "lost";
+    setGameWin("lost");
     setTime(defaultTime);
     setTimerOn(false);
     setOldWords();
@@ -129,7 +129,8 @@ export default function WackyWords() {
         if (tracker) {
           setTimerOn(false);
           completed.current = true;
-          gameWin.current = "Won";
+          setGameWin("Won");
+          changeError(true);
           var popUp = document.getElementById("popUp");
           popUp.classList.remove("invisible");
           var btn = document.getElementById("generateWord");
@@ -143,6 +144,7 @@ export default function WackyWords() {
 
   useEffect(() => {
     document.body.addEventListener("keydown", function (event) {
+      console.log(answer);
       if (completed.current) return;
       if (!timerOn && !completed.current) {
         setTimerOn(true);
@@ -172,6 +174,7 @@ export default function WackyWords() {
       popup.classList.add("invisible");
     } else {
       popup.classList.remove("invisible");
+      popup.classList.add("animate-fade");
     }
   }
 
@@ -189,6 +192,7 @@ export default function WackyWords() {
           popUp.classList.remove("invisible");
           var btn = document.getElementById("generateWord");
           btn.classList.remove("invisible");
+          changeError(true);
           completed.current = true;
         }
       }, 10);
@@ -206,7 +210,7 @@ export default function WackyWords() {
         className="fixed flex w-fit p-10 bg-gray-900 text-white rounded-3xl inset-x-44 m-auto z-10 top-72 invisible flex-wrap"
       >
         <h1 className="m-auto text-xl">
-          You {gameWin.current} todays Wacky Word of {answer.current}
+          You {gameWin} the Wacky Word of {answer.current}
         </h1>
         <button onClick={generateEmojis} className="bg-teal rounded p-1 w-fit m-auto basis-full">Share?</button>
       </div>
@@ -226,7 +230,7 @@ export default function WackyWords() {
       </div>
       <div className="m-auto w-fit p-10 flex fixed inset-x-44">
         <h1 className="text-zinc-200 text-9xl">
-          {("0" + Math.floor((time / 1000) % 60)).slice(-2) + ":"}
+          {("0" + Math.floor((time / 1000) % 100)).slice(-2) + ":"}
         </h1>
         <h1 className="text-zinc-200 text-8xl bottom-0 pt-7">
           {("0" + ((time / 10) % 100)).slice(-2)}

@@ -2,6 +2,12 @@ module.exports = {
   content: ["./pages/**/*.{html,js}", "./components/**/*.{html,js}"],
   theme: {
     extend: {
+
+      animation: {
+        fade: 'fadeOut 5s ease-in-out',
+      },
+
+
       colors: {
         darkGrey: "#222326",
         grey: "#373B40",
