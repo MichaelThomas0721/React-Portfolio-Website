@@ -26,16 +26,19 @@ export default function WackyWords() {
   const answerEmojis = useRef("");
   const childFunc = useRef(null);
   const keebFunc = useRef(null);
+  const styleBool = useRef(false);
   const [keyboardStyling, setKeyboardStyling] = useState(generateKeyStyling);
 
   function generateKeyStyling() {
-    let alphabet = "QWERTYUIOPASDFGHJKLZXCVBNM";
     let styleObject = {};
+    if (styleBool.current) styleObject = keyboardStyling;
+    let alphabet = "QWERTYUIOPASDFGHJKLZXCVBNM";
     for (let i = 0; i < alphabet.length; i++) {
       styleObject[alphabet[i]] = "keebRegular";
     }
     styleObject.ENTER = "bg-grey rounded-lg w-kbew h-kbrh m-1";
     styleObject["\u232b"] = "bg-grey rounded-lg w-kbew h-kbrh m-1";
+    styleBool.current = true;
     return styleObject;
   }
 
@@ -82,6 +85,12 @@ export default function WackyWords() {
     popUp.classList.add("invisible");
     btn.classList.add("invisible");
     changeWord();
+    for (let letProp in keyboardStyling){
+      keyboardStyling[letProp] = "keebRegular"
+    }
+    keyboardStyling.ENTER = "bg-grey rounded-lg w-kbew h-kbrh m-1";
+    keyboardStyling["\u232b"] = "bg-grey rounded-lg w-kbew h-kbrh m-1";
+    keebFunc.current();
     while (userInput.length) {
       let temp = userInput;
       temp.pop();
@@ -108,26 +117,19 @@ export default function WackyWords() {
         for (let lett in userInput) {
           if (userInput[lett].toUpperCase() == answer.current.charAt(lett)) {
             temp.push(0);
-            let tmpStyle = keyboardStyling;
-            tmpStyle[userInput[lett]] = "keebGreen";
-            setKeyboardStyling(tmpStyle);
+            keyboardStyling[userInput[lett]] = "keebGreen";
           } else if (answer.current.includes(userInput[lett])) {
             temp.push(1);
             tracker = false;
-            if (keyboardStyling[userInput[lett]] != "keebGreen"){
-              let tmpStyle = keyboardStyling;
-            tmpStyle[userInput[lett]] = "keebYellow";
-            setKeyboardStyling(tmpStyle);
+            if (keyboardStyling[userInput[lett]] != "keebGreen") {
+              keyboardStyling[userInput[lett]] = "keebYellow";
             }
           } else {
             tracker = false;
             temp.push(2);
-            if (keyboardStyling[userInput[lett]] != "keebYellow"){
-            let tmpStyle = keyboardStyling;
-            tmpStyle[userInput[lett]] = "keebNA";
-            setKeyboardStyling(tmpStyle);
+            if (keyboardStyling[userInput[lett]] != "keebYellow") {
+              keyboardStyling[userInput[lett]] = "keebNA";
             }
-            
           }
         }
         keebFunc.current();
