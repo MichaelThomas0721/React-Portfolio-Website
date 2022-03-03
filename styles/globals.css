@@ -3,17 +3,20 @@
 @tailwind utilities;
 
 @layer components {
+  .keebExtended{
+    @apply bg-grey rounded-lg w-kbew h-kbrh border-none font-bold text-xl;
+  }
   .keebRegular{
-    @apply bg-grey rounded-lg w-kbrw h-kbrh m-1;
+    @apply bg-grey rounded-lg w-kbrw h-kbrh border-none font-bold text-xl;
   }
   .keebYellow {
-    @apply bg-yellow-300 rounded-lg w-kbrw h-kbrh m-1;
+    @apply bg-yellow-300 rounded-lg w-kbrw h-kbrh border-none font-bold text-xl;
   }
   .keebGreen {
-    @apply bg-teal rounded-lg w-kbrw h-kbrh m-1;
+    @apply bg-teal rounded-lg w-kbrw h-kbrh border-none font-bold text-xl;
   }
   .keebNA {
-    @apply bg-darkGrey rounded-lg w-kbrw h-kbrh m-1;
+    @apply bg-darkGrey rounded-lg w-kbrw h-kbrh border-none font-bold text-xl;
   }
   .letterYellow {
     @apply bg-yellow-300 w-lrw h-lrw rounded text-5xl text-center;

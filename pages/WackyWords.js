@@ -4,6 +4,7 @@ import InactiveLetterHolder from "./../components/InactiveLetterHolder";
 import { wordList } from "./../contrants/wordBank";
 import { things } from "./../contrants/answers";
 import Keyboard from "./../components/Keyboard";
+import Head from 'next/head'
 
 export default function WackyWords() {
   const answer = useRef(
@@ -36,8 +37,8 @@ export default function WackyWords() {
     for (let i = 0; i < alphabet.length; i++) {
       styleObject[alphabet[i]] = "keebRegular";
     }
-    styleObject.ENTER = "bg-grey rounded-lg w-kbew h-kbrh m-1";
-    styleObject["\u232b"] = "bg-grey rounded-lg w-kbew h-kbrh m-1";
+    styleObject.ENTER = "keebExtended";
+    styleObject["\u232b"] = "keebExtended";
     styleBool.current = true;
     return styleObject;
   }
@@ -65,6 +66,8 @@ export default function WackyWords() {
       emojis = emojis.concat(layer);
       if (i != data.current.length - 1) emojis = emojis.concat("\n");
     }
+    var btn = document.getElementById("genEmojis");
+    btn.innerHTML = "Copied!";
     answerEmojis.current = emojis;
     navigator.clipboard.writeText(emojis);
   }
@@ -81,15 +84,17 @@ export default function WackyWords() {
     var btn = document.getElementById("generateWord");
     var popUp = document.getElementById("popUp");
     var uBox = document.getElementById("userInputBox");
+    var btnShare = document.getElementById("genEmojis");
     uBox.classList.remove("invisible");
     popUp.classList.add("invisible");
     btn.classList.add("invisible");
+    btnShare.innerHTML = "Share?";
     changeWord();
-    for (let letProp in keyboardStyling){
-      keyboardStyling[letProp] = "keebRegular"
+    for (let letProp in keyboardStyling) {
+      keyboardStyling[letProp] = "keebRegular";
     }
-    keyboardStyling.ENTER = "bg-grey rounded-lg w-kbew h-kbrh m-1";
-    keyboardStyling["\u232b"] = "bg-grey rounded-lg w-kbew h-kbrh m-1";
+    keyboardStyling.ENTER = "keebExtended";
+    keyboardStyling["\u232b"] = "keebExtended";
     keebFunc.current();
     while (userInput.length) {
       let temp = userInput;
@@ -235,6 +240,10 @@ export default function WackyWords() {
 
   return (
     <div className="bg-darkGrey h-fit min-h-screen m-auto">
+      <Head>
+        <title>Wacky Words</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <div
         id="popUp"
         className="fixed flex w-fit p-10 bg-gray-900 text-white rounded-3xl right-1/2 translate-x-1/2 m-auto z-10 top-72 invisible flex-wrap h-"
@@ -244,7 +253,8 @@ export default function WackyWords() {
         </h1>
         <button
           onClick={generateEmojis}
-          className="bg-teal rounded p-1 w-fit m-auto basis-full"
+          className="bg-teal rounded p-1 w-fit m-auto basis-full hover:bg-lightTeal"
+          id="genEmojis"
         >
           Share?
         </button>
@@ -259,7 +269,7 @@ export default function WackyWords() {
       <div
         onClick={newGame}
         id="generateWord"
-        className="m-auto w-fit h-fit p-5 flex fixed right-1/2 translate-x-1/2 mt-36 rounded-xl bg-teal"
+        className="m-auto w-fit h-fit p-5 flex fixed right-1/2 translate-x-1/2 mt-36 rounded-xl bg-teal hover:bg-lightTeal"
       >
         <h1 className="text-zinc-200 text-xl">Generate New Word?</h1>
       </div>
