@@ -2,6 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .keebRegular{
+    @apply bg-grey rounded-lg w-kbrw h-kbrh m-1;
+  }
+  .keebYellow {
+    @apply bg-yellow-300 rounded-lg w-kbrw h-kbrh m-1;
+  }
+  .keebGreen {
+    @apply bg-teal rounded-lg w-kbrw h-kbrh m-1;
+  }
+  .keebNA {
+    @apply bg-darkGrey rounded-lg w-kbrw h-kbrh m-1;
+  }
+  .letterYellow {
+    @apply bg-yellow-300 w-lrw h-lrw rounded text-5xl text-center;
+  }
+  .letterGreen {
+    @apply bg-teal w-lrw h-lrw rounded text-5xl text-center;
+  }
+  .letterNA {
+    @apply bg-grey w-lrw h-lrw rounded text-5xl text-center;
+  }
+}
+
 html,
 
 :root {

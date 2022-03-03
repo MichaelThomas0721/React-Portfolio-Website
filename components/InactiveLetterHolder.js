@@ -39,7 +39,7 @@ export default function InactiveLetterHolder(props) {
   ];
 
   return (
-    <div className="flex m-10">
+    <div className="flex m-4">
       {letters}
     </div>
   );

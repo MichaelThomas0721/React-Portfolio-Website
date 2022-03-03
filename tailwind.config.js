@@ -3,6 +3,13 @@ module.exports = {
   theme: {
     extend: {
 
+      spacing: {
+        'kbrw' : '32px',
+        'kbrh' : '48px',
+        'kbew' : '56px',
+        'lrw' : '56px'
+      },
+
       animation: {
         fade: 'fadeOut 5s ease-in-out',
       },
@@ -10,6 +17,7 @@ module.exports = {
 
       colors: {
         darkGrey: "#222326",
+        darkishGrey: "#27282b",
         grey: "#373B40",
         lightTeal: "#27F2B9",
         teal: "#23D9A5",

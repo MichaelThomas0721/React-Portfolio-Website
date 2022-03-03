@@ -5,19 +5,19 @@ export default function InactiveLetter(props) {
     const corrects = props.corrects;
     const values = props.value;
     const [classString, setClassString] = useState(
-        "bg-grey w-20 h-20 rounded text-7xl text-center"
+        "letterNA"
       );
 
       useEffect(() =>{
           if (corrects[props.pos] == 0){
-              setClassString("bg-teal w-20 h-20 rounded text-7xl text-center")
+              setClassString("letterGreen")
           } else if (corrects[props.pos] == 1){
-            setClassString("bg-yellow-300 w-20 h-20 rounded text-7xl text-center")
+            setClassString("letterYellow")
           }
       }, [])
 
   return (
-    <div className="px-5">
+    <div className="px-3">
       <h1 className={classString} id="lettr">
         {values[props.pos]}
       </h1>

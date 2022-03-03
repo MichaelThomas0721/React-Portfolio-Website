@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 export default function Letter(props) {
   const[letter, setLetter] = useState("");
   const [classString, setClassString] = useState(
-    "bg-grey w-20 h-20 rounded text-7xl text-center"
+    "letterNA"
   );
 
   useEffect(() => {
@@ -11,7 +11,7 @@ export default function Letter(props) {
   }, [props.cNotifier]);
 
   return (
-    <div className="px-5">
+    <div className="px-3">
       <h1 className={classString} id="lettr">
         {letter}
       </h1>
