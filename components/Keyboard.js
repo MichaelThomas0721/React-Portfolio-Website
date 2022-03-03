@@ -23,7 +23,7 @@ export default function Keyboard(props) {
   function updateKeyboard() {
     setKeyBoardKeys(
       keys.map((item, index) => (
-        <div key={index} className="m-auto w-fit">
+        <div key={index} className="w-auto flex flex-row gap-1 align-center">
           {item.map((key, keyIndex) => (
             <button
               className={test[key]}
@@ -44,7 +44,7 @@ export default function Keyboard(props) {
 
   const [keyBoardKeys, setKeyBoardKeys] = useState(
     keys.map((item, index) => (
-      <div key={index} className="m-auto w-fit">
+      <div key={index} className="w-auto flex flex-row gap-1 align-center">
         {item.map((key, keyIndex) => (
           <button
             className={test[key]}
@@ -57,6 +57,5 @@ export default function Keyboard(props) {
       </div>
     ))
   );
-
-  return <div>{keyBoardKeys}</div>;
+  return <div className="flex flex-col gap-1 items-center">{keyBoardKeys}</div>;
 }

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-const https = require('https');
+const https = require("https");
 import styles from "./../styles/streamdeck.module.css";
+import Head from "next/head";
 
 export default function StreamDeck() {
   const [file, setFile] = useState("");
@@ -16,9 +17,9 @@ export default function StreamDeck() {
       headers: {
         "content-type": "multipart/form-data",
         "Access-Control-Allow-Origin": "true",
-        httpsAgent: new https.Agent({  
-          rejectUnauthorized: false
-        })
+        httpsAgent: new https.Agent({
+          rejectUnauthorized: false,
+        }),
       },
     };
 
@@ -74,6 +75,10 @@ export default function StreamDeck() {
 
   return (
     <div className={styles.parentBox}>
+      <Head>
+        <title>Stream Deck Wallpaper</title>
+        <meta property="og:title" content="My page title" key="title" />
+      </Head>
       <h1 className={styles.WallpaperHeader}>
         Stream Deck Wallpaper Generator
       </h1>

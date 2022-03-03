@@ -4,9 +4,9 @@ module.exports = {
     extend: {
 
       spacing: {
-        'kbrw' : '32px',
-        'kbrh' : '48px',
-        'kbew' : '56px',
+        'kbrw' : '40px',
+        'kbrh' : '50px',
+        'kbew' : '64px',
         'lrw' : '56px'
       },
 
