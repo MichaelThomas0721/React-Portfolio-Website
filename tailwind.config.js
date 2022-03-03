@@ -4,10 +4,10 @@ module.exports = {
     extend: {
 
       spacing: {
-        'kbrw' : '40px',
-        'kbrh' : '50px',
+        'kbrw' : '38px',
+        'kbrh' : '48px',
         'kbew' : '64px',
-        'lrw' : '56px'
+        'lrw' : '54px'
       },
 
       animation: {
