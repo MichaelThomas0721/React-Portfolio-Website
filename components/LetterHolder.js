@@ -52,7 +52,7 @@ export default function LetterHolder(props) {
   }
 
   return (
-    <div onClick={test} className="flex m-10">
+    <div onClick={test} className="flex m-4">
       {letters}
     </div>
   );
