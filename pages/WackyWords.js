@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import LetterHolder from "./../components/LetterHolder";
 import InactiveLetterHolder from "./../components/InactiveLetterHolder";
+import CorrectLetterHolder from "./../components/CorrectLetterHolder";
 import { wordList } from "./../contrants/wordBank";
 import { things } from "./../contrants/answers";
 import Keyboard from "./../components/Keyboard";
@@ -20,7 +21,7 @@ export default function WackyWords() {
   const [oldWords, setOldWords] = useState();
   const completed = useRef(false);
   const [gameWin, setGameWin] = useState("lost");
-  const defaultTime = 90000;
+  const defaultTime = 30000;
   const endTime = useRef(0);
   const [time, setTime] = useState(defaultTime);
   const [timerOn, setTimerOn] = useState(false);
@@ -29,6 +30,7 @@ export default function WackyWords() {
   const keebFunc = useRef(null);
   const styleBool = useRef(false);
   const [keyboardStyling, setKeyboardStyling] = useState(generateKeyStyling);
+  const [corrects, setCorrects] = useState([null, null, null, null, null]);
 
   function generateKeyStyling() {
     let styleObject = {};
@@ -49,9 +51,9 @@ export default function WackyWords() {
       emojis = emojis.concat(
         ("0" + Math.floor((endTime.current / 1000) % 100)).slice(-2) + ":",
         ("0" + ((endTime.current / 10 - 1) % 100)).slice(-2),
-        "/90.00\n\n"
+        "/30.00\n\n"
       );
-    else emojis = emojis.concat("X/90.00 \n");
+    else emojis = emojis.concat("X/30.00 \n");
     for (let i = 0; i < data.current.length; i++) {
       let word = data.current[i];
       let layer = "";
@@ -101,6 +103,11 @@ export default function WackyWords() {
       temp.pop();
       setUserInput(temp);
     }
+    while (corrects.length) {
+      let temp = corrects;
+      temp.pop();
+      setCorrects(temp);
+    }
     childFunc.current();
     completed.current = false;
     setGameWin("lost");
@@ -123,6 +130,7 @@ export default function WackyWords() {
           if (userInput[lett].toUpperCase() == answer.current.charAt(lett)) {
             temp.push(0);
             keyboardStyling[userInput[lett]] = "keebGreen";
+            corrects[lett] = userInput[lett];
           } else if (answer.current.includes(userInput[lett])) {
             temp.push(1);
             tracker = false;
@@ -283,6 +291,9 @@ export default function WackyWords() {
       </div>
 
       <div className="m-auto w-min pt-80">
+        <div className="fixed -mt-20" id="userInputBox">
+          <CorrectLetterHolder values={corrects} />
+        </div>
         <div className="fixed" id="userInputBox">
           <LetterHolder userWord={userInput} event={childFunc} />
         </div>
@@ -293,6 +304,9 @@ export default function WackyWords() {
       </div>
       <div className="right-1/2 translate-x-1/2 bottom-1 m-auto w-fit fixed bg-darkishGrey rounded-2xl">
         <Keyboard keyboardStyling={keyboardStyling} event={keebFunc} />
+      </div>
+      <div className="bottom-0 m-auto w-fit bg-darkishGrey rounded-2xl invisible">
+        <Keyboard keyboardStyling={keyboardStyling} event={useRef()} />
       </div>
     </div>
   );

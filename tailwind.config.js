@@ -7,7 +7,8 @@ module.exports = {
         'kbrw' : '38px',
         'kbrh' : '48px',
         'kbew' : '64px',
-        'lrw' : '54px'
+        'lrw' : '54px',
+        'navWidth' : '100vw'
       },
 
       animation: {
@@ -18,7 +19,9 @@ module.exports = {
       colors: {
         darkGrey: "#222326",
         darkishGrey: "#27282b",
+        darkerRegularGrey: "#37393d",
         grey: "#373B40",
+        lightGrey: "#60646b",
         lightTeal: "#27F2B9",
         teal: "#23D9A5",
         darkTeal: "#327361",

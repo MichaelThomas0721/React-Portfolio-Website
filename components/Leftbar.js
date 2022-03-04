@@ -1,5 +1,4 @@
 import styles from "../styles/leftbar.module.css";
-import file from "./../public/Images/MTLogo.svg"
 
 export const Leftbar = () => {
   return (

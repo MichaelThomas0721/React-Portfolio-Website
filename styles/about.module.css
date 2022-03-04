@@ -1,14 +1,12 @@
 .aboutContainer {
-  width: 100%;
-  display: flex;
-  min-height: 80vh;
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .modelContainer {
-  height: 100%;
   width: 50%;
   float: left;
 }
@@ -54,17 +52,8 @@
     order: 2;
   }
 }
-@media (max-width: 767px) {
-  .aboutContainer {
-  }
-  .aboutParagraph {
-  }
-}
-@media (max-width: 479px) {
-  .aboutContainer {
-
-  }
-  .textContainer {
-
+@media (max-width: 880px) {
+  .modelContainer{
+    height: 0%;
   }
 }

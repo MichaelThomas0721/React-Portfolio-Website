@@ -1,5 +1,5 @@
 .leftbar {
-    position: absolute;
+    position: fixed;
     width: 30px;
     bottom: 0;
     margin-left: 40px;
@@ -40,4 +40,10 @@
     margin: 0 auto;
     fill: #fff !important;
     padding-left: 5px;
+  }
+
+  @media screen and (max-width: 830px) {
+    .leftbar {
+      visibility: hidden;
+    }
   }
