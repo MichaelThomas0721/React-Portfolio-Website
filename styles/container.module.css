@@ -1,62 +1,26 @@
 .grid_container {
-    background: var(--darkGrey);
-    display: grid; 
-    grid-template-columns: 0.5fr 1.5fr 1.5fr 0.5fr; 
-    gap: 0px 0px; 
-    grid-template-rows: repeat(6, min-content);
-    grid-template-areas: 
-      ". Top Top ."
-      ". About About ."
-      ". Education Education ."
-      ". Experience Experience ."
-      ". Projects Projects ."
-      ". Contact Contact ."
-      ". Footer Footer .";
-      height: 100vh;
-    scroll-snap-type: y proximity;;
-    overflow-y: auto;
-    scroll-behavior: auto;
-}
-
-.sections{
-  height: 100vh;
-  min-height: min-content;
+  background: var(--darkGrey);
   display: flex;
-  scroll-snap-align: start;
+  flex-direction: column;
 }
 
-.section div {
+.grid_container section {
+
+}
+
+.top {
   height: 100vh;
-  min-height: min-content;
 }
 
-#top { 
-  grid-area: Top;
+.projects {
+  margin-top: 20vh; 
 }
 
-#about { 
-  grid-area: About;
+.contact {
+  margin-bottom: 30vh;
 }
 
-#education {
-  grid-area: Education;
-}
 
-#experience {
-  grid-area: Experience;
-}
-
-#projects {
-  grid-area: Projects;
-  height: 150vh;
-}
-
-#contact {
-  grid-area: Contact;
-  height: 75vh;
-}
-
-#footer {
+.footer {
   height: fit-content;
-  grid-area: Footer;
 }
