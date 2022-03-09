@@ -34,6 +34,13 @@
   .navLink {
     @apply text-3xl font-semibold text-teal text-ti-letter-case-upper;
   }
+
+  .rpsBtn {
+    @apply bg-black text-6xl rounded-full p-7 text-center shadow-2xl select-none m-4;
+  }
+  .pmBtn {
+    @apply bg-black text-white aspect-square text-6xl p-7 w-32 rounded-full text-center shadow-2xl select-none m-4 cursor-pointer;
+  }
 }
 
 :root {

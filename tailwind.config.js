@@ -8,7 +8,9 @@ module.exports = {
         'kbrh' : '48px',
         'kbew' : '64px',
         'lrw' : '54px',
-        'navWidth' : '100vw'
+        'navWidth' : '100vw',
+        'optionsTop' : '450px',
+        'pmTop' : '650px',
       },
 
       animation: {
