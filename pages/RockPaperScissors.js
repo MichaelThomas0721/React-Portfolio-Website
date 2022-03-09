@@ -1,7 +1,6 @@
-import { useState } from "react";
-import { useRef } from "react";
-import { useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import RpsButton from "./../components/RpsButton";
+import RpsInfo from "./../components/RpsInfo";
 
 export default function RockPaperScissors() {
   const [aiText, setAiText] = useState("Pick");
@@ -11,6 +10,7 @@ export default function RockPaperScissors() {
   const [wins, setWins] = useState(0);
   const [losses, setLosses] = useState(0);
   const [ties, setTies] = useState(0);
+  const [popUp, setPopUp] = useState();
   const userInput = useRef();
   const emojis = [
     "✊",
@@ -72,7 +72,7 @@ export default function RockPaperScissors() {
   }
 
   function changeOptions(value) {
-    if (optionsAmount.current > 3 || value > 0)
+    if ((optionsAmount.current > 3 || value > 0) && (optionsAmount.current < emojis.length || value < 0))
       optionsAmount.current = optionsAmount.current + value;
 
     usedEmojis.current = new Map();
@@ -82,8 +82,12 @@ export default function RockPaperScissors() {
     makeOptions();
   }
 
-  function updateInfo(){
-    
+  function OpenPopUp(){
+    setPopUp(<RpsInfo usedEmojis={usedEmojis} ChangePopUp={ClosePopUp}/>)
+  }
+
+  function ClosePopUp(){
+    setPopUp();
   }
 
   useEffect(() => {
@@ -92,13 +96,15 @@ export default function RockPaperScissors() {
 
   return (
     <div>
+      {popUp}
       <div className="bg-zinc-900 w-full text-xl md:text-3xl justify-center flex flex-wrap text-white">
         <h1 className="p-3">Wins: {wins}</h1>
         <h1 className="p-3">Losses: {losses}</h1>
         <h1 className="p-3">Ties: {ties}</h1>
+        <button className="text-white text-3xl w-fit mr-0 justify-end" onClick={() => OpenPopUp()}>Help</button>
       </div>
       <div className="">
-        <div className="text-3xl mb-2 md:mb-10 text-center md:text-6xl">
+        <div className="text-3xl text-white mb-2 md:mb-10 text-center md:text-6xl">
           <h1>{aiText}</h1>
           <h1>{userText}</h1>
         </div>
