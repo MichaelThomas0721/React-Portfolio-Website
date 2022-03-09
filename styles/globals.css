@@ -36,10 +36,10 @@
   }
 
   .rpsBtn {
-    @apply bg-black text-6xl rounded-full p-7 text-center shadow-2xl select-none m-4;
+    @apply bg-black text-3xl w-24 aspect-square rounded-full p-7 text-center shadow-2xl select-none m-4 md:text-6xl md:w-32;
   }
   .pmBtn {
-    @apply bg-black text-white aspect-square text-6xl p-7 w-32 rounded-full text-center shadow-2xl select-none m-4 cursor-pointer;
+    @apply  bg-black text-3xl w-24 text-white aspect-square rounded-full text-center shadow-2xl select-none cursor-pointer p-7 m-4 md:text-6xl  md:w-32 ;
   }
 }
 
