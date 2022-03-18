@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import RpsButton from "./../components/RpsButton";
 import RpsInfo from "./../components/RpsInfo";
+import dynamic from "next/dynamic";
+const Picker = dynamic(() => import('emoji-picker-react'), { ssr: false });
 
 export default function RockPaperScissors() {
   const [aiText, setAiText] = useState("Pick");
@@ -12,7 +14,7 @@ export default function RockPaperScissors() {
   const [ties, setTies] = useState(0);
   const [popUp, setPopUp] = useState();
   const userInput = useRef();
-  const emojis = [
+  let emojis = useRef([
     "✊",
     "✋",
     "✌",
@@ -24,9 +26,11 @@ export default function RockPaperScissors() {
     "👉",
     "👍",
     "👎",
-  ];
+  ]);
   const usedEmojis = useRef(new Map());
   const [info, setInfo] = useState("");
+  const [emojiPicker, setEmojiPicker] = useState();
+  const btnChange = useRef();
 
   function changeAiText() {
     let aiInput = Math.floor(Math.random() * optionsAmount.current);
@@ -64,6 +68,7 @@ export default function RockPaperScissors() {
             value={value}
             userInput={userInput}
             num={key}
+            PickEmoji={PickEmoji}
             key={key}
           />
         );
@@ -72,12 +77,15 @@ export default function RockPaperScissors() {
   }
 
   function changeOptions(value) {
-    if ((optionsAmount.current > 3 || value > 0) && (optionsAmount.current < emojis.length || value < 0))
+    if ((optionsAmount.current > 3 || value > 0))
       optionsAmount.current = optionsAmount.current + value;
-
     usedEmojis.current = new Map();
-    for (let em in emojis.slice(0, optionsAmount.current)) {
-      usedEmojis.current.set(em, emojis[em]);
+
+    for (let i = 0; i < optionsAmount.current; i++){
+      if (i >= emojis.current.length){
+        emojis.current.push(" ");
+      }
+        usedEmojis.current.set(i, emojis.current[i]);
     }
     makeOptions();
   }
@@ -90,9 +98,24 @@ export default function RockPaperScissors() {
     setPopUp();
   }
 
+  function PickEmoji(btnId){
+    btnChange.current = btnId;
+    const ePicker = document.getElementById("ePicker");
+    ePicker.classList.toggle("hidden");
+  }
+
   useEffect(() => {
     changeOptions(0);
   }, []);
+
+  const onEmojiClick = (event, emojiObject) => {
+    emojis.current[btnChange.current] = emojiObject.emoji;
+    changeOptions();
+    makeOptions();
+    const ePicker = document.getElementById("ePicker");
+    ePicker.classList.toggle("hidden");
+  };
+
 
   return (
     <div>
@@ -117,6 +140,9 @@ export default function RockPaperScissors() {
             +
           </h1>
         </div>
+      </div>
+      <div id="ePicker" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden">
+      <Picker onEmojiClick={onEmojiClick} />
       </div>
     </div>
   );
