@@ -6,7 +6,7 @@ import Model from "./Model";
 
 export const TopMain = () => {
   return (
-    <div className="w-fit m-auto md:ml-72 mt-72 flex">
+    <div className="w-fit m-auto md:ml-72 mt-24 flex">
       <div>
         <h1 className="text-ti-align-left mt-40 text-offWhite text-base mb-0">
         My Name is
@@ -18,7 +18,7 @@ export const TopMain = () => {
         <Typing.Typing />
       </div>
       </div>
-      
+      {/*
       <Canvas className="float-right w-1/2 ml-52"
         camera={{ position: [2, 0, 12.25], fov: 15 }}
         style={{width: "50%", height: "100%" }}
@@ -31,6 +31,7 @@ export const TopMain = () => {
         </Suspense>
         <OrbitControls />
       </Canvas>
+  */}
     </div>
   );
 };

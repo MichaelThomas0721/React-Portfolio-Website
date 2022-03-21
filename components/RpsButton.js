@@ -2,7 +2,7 @@ import { useState } from "react";
 import dynamic from "next/dynamic";
 const Picker = dynamic(() => import('emoji-picker-react'), { ssr: false });
 
-export default function (props) {
+export default function RpsButton (props) {
   const [picker, setPicker] = useState(null);
 
   function test() {
