@@ -15,10 +15,15 @@
     "static/development/_middlewareManifest.js"
   ],
   "pages": {
-    "/RockPaperScissors": [
+    "/": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/RockPaperScissors.js"
+      "static/chunks/pages/index.js"
+    ],
+    "/WackyWords": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/WackyWords.js"
     ],
     "/_app": [
       "static/chunks/webpack.js",
