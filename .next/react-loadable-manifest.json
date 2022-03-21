@@ -1,0 +1,14 @@
+{
+  "..\\components\\RpsButton.js -> emoji-picker-react": {
+    "id": "..\\components\\RpsButton.js -> emoji-picker-react",
+    "files": [
+      "static/chunks/node_modules_emoji-picker-react_dist_index_js.js"
+    ]
+  },
+  "RockPaperScissors.js -> emoji-picker-react": {
+    "id": "RockPaperScissors.js -> emoji-picker-react",
+    "files": [
+      "static/chunks/node_modules_emoji-picker-react_dist_index_js.js"
+    ]
+  }
+}
