@@ -20,10 +20,10 @@ export default function RpsInfo(props) {
       let winEm = [];
       let lossEm = [];
       for (let num in win) {
-        winEm.push(props.usedEmojis.current.get(String(win[num])));
+        winEm.push(props.usedEmojis.current.get((win[num])));
       }
       for (let num in loss) {
-        lossEm.push(props.usedEmojis.current.get(String(loss[num])));
+        lossEm.push(props.usedEmojis.current.get((loss[num])));
       }
       info.set(opt, [winEm, lossEm]);
     }
@@ -64,6 +64,7 @@ export default function RpsInfo(props) {
             value={value}
             userInput={userInput}
             num={key}
+            PickEmoji={props.PickEmoji}
             key={key}
           />
         );
@@ -77,10 +78,10 @@ export default function RpsInfo(props) {
   }, [props.usedEmojis.current]);
 
   return (
-    <div className="absolute w-full h-full bg-darkGrey">
+    <div className="absolute w-full h-full bg-darkGrey text-white">
       {infoPopUp}
       <div className="flex flex-wrap justify-center">{infoButtons}</div>
-      <button className="left-1/2 text-white text-3xl" onClick={props.ChangePopUp}>Close</button>
+      <button className="text-white text-3xl border-white border-2 px-4 py-2 rounded-lg bg-gray-700 hover:bg-gray-800 absolute left-1/2 -translate-x-1/2 translate-y-10" onClick={props.ChangePopUp}>Close</button>
     </div>
   );
 }
