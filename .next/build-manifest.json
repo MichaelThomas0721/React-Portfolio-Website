@@ -1,56 +1,39 @@
 {
   "polyfillFiles": [
-    "static/chunks/polyfills-5cd94c89d3acac5f.js"
+    "static/chunks/polyfills.js"
   ],
-  "devFiles": [],
-  "ampDevFiles": [],
+  "devFiles": [
+    "static/chunks/react-refresh.js"
+  ],
+  "ampDevFiles": [
+    "static/chunks/webpack.js",
+    "static/chunks/amp.js"
+  ],
   "lowPriorityFiles": [
-    "static/ZWJmo2Q2C_8AZX7ZZ618S/_buildManifest.js",
-    "static/ZWJmo2Q2C_8AZX7ZZ618S/_ssgManifest.js",
-    "static/ZWJmo2Q2C_8AZX7ZZ618S/_middlewareManifest.js"
+    "static/development/_buildManifest.js",
+    "static/development/_ssgManifest.js",
+    "static/development/_middlewareManifest.js"
   ],
   "pages": {
     "/": [
-      "static/chunks/webpack-669c667e3af4f75b.js",
-      "static/chunks/framework-5f4595e5518b5600.js",
-      "static/chunks/main-a4d9e436b9a532ca.js",
-      "static/chunks/fb7d5399-ae6009d380f1cd8b.js",
-      "static/chunks/935-f2939b2ab203f8f2.js",
-      "static/css/03d82d14b166774a.css",
-      "static/chunks/pages/index-ea89b095ecbbf47d.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/index.js"
     ],
     "/RockPaperScissors": [
-      "static/chunks/webpack-669c667e3af4f75b.js",
-      "static/chunks/framework-5f4595e5518b5600.js",
-      "static/chunks/main-a4d9e436b9a532ca.js",
-      "static/chunks/pages/RockPaperScissors-da0bb7f6da5338ff.js"
-    ],
-    "/StreamDeck": [
-      "static/chunks/webpack-669c667e3af4f75b.js",
-      "static/chunks/framework-5f4595e5518b5600.js",
-      "static/chunks/main-a4d9e436b9a532ca.js",
-      "static/chunks/858-0d8559f2ef317120.js",
-      "static/css/54461c42b27a28a1.css",
-      "static/chunks/pages/StreamDeck-aba7465bd6ed75ef.js"
-    ],
-    "/WackyWords": [
-      "static/chunks/webpack-669c667e3af4f75b.js",
-      "static/chunks/framework-5f4595e5518b5600.js",
-      "static/chunks/main-a4d9e436b9a532ca.js",
-      "static/chunks/pages/WackyWords-71e6767259788688.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/RockPaperScissors.js"
     ],
     "/_app": [
-      "static/chunks/webpack-669c667e3af4f75b.js",
-      "static/chunks/framework-5f4595e5518b5600.js",
-      "static/chunks/main-a4d9e436b9a532ca.js",
-      "static/css/4874b076098d885a.css",
-      "static/chunks/pages/_app-6a53e3fbb50ab370.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/_app.js"
     ],
     "/_error": [
-      "static/chunks/webpack-669c667e3af4f75b.js",
-      "static/chunks/framework-5f4595e5518b5600.js",
-      "static/chunks/main-a4d9e436b9a532ca.js",
-      "static/chunks/pages/_error-2280fa386d040b66.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/_error.js"
     ]
   },
   "ampFirstPages": []

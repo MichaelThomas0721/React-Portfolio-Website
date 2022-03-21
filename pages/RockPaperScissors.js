@@ -81,7 +81,7 @@ export default function RockPaperScissors() {
   }
 
   function OpenPopUp() {
-    setPopUp(<RpsInfo usedEmojis={usedEmojis} ChangePopUp={ClosePopUp} PickEmoji={PickEmoji}/>);
+    setPopUp();
     document.getElementById("popup").classList.remove("hidden");
     document.getElementById("everything").classList.add("hidden");
   }
@@ -112,7 +112,7 @@ export default function RockPaperScissors() {
 
   return (
     <div>
-      <div id="popup">{popUp}</div>
+      <div id="popup"><RpsInfo usedEmojis={usedEmojis} ChangePopUp={ClosePopUp} PickEmoji={PickEmoji}/></div>
       <div id="everything">
         <div className="bg-zinc-900 w-full text-xl md:text-3xl justify-center flex flex-wrap text-white">
           <h1 className="p-3">Wins: {wins}</h1>
@@ -140,13 +140,13 @@ export default function RockPaperScissors() {
             </h1>
           </div>
         </div>
+        </div>
         <div
           id="ePicker"
           className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden"
         >
           <Picker onEmojiClick={onEmojiClick} />
         </div>
-      </div>
     </div>
   );
 }

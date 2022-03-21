@@ -1,11 +1,6 @@
 {
-  "/RockPaperScissors": "pages/RockPaperScissors.html",
-  "/StreamDeck": "pages/StreamDeck.html",
-  "/WackyWords": "pages/WackyWords.html",
   "/_app": "pages/_app.js",
-  "/api/hello": "pages/api/hello.js",
-  "/": "pages/index.html",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/404": "pages/404.html"
+  "/RockPaperScissors": "pages/RockPaperScissors.js"
 }
