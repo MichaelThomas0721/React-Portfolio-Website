@@ -15,11 +15,6 @@
     "static/development/_middlewareManifest.js"
   ],
   "pages": {
-    "/": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/index.js"
-    ],
     "/Bashify": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -29,11 +24,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/Bashify/PlaylistCustomizer.js"
-    ],
-    "/Bashify/PlaylistList": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/Bashify/PlaylistList.js"
     ],
     "/_app": [
       "static/chunks/webpack.js",

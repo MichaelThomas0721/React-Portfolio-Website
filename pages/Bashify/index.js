@@ -1,4 +1,5 @@
 import { useSession, signIn, signOut } from "next-auth/react";
+import Link from "next/link";
 
 export default function Home() {
   const { data: session } = useSession();
@@ -19,12 +20,11 @@ export default function Home() {
             Sign out
           </button>{" "}
           <br />
-          <a
-            className="rounded bg-green-500 text-white font-bold w-fit h-fit mt-3 p-3 pl-6 pr-6 m-auto align-middle hover:bg-green-600"
-            href="/Bashify/PlaylistList"
-          >
-            See Playlists
-          </a>
+          <Link href="/Bashify/PlaylistList">
+            <div className="rounded bg-green-500 text-white font-bold w-fit h-fit mt-3 p-3 pl-6 pr-6 m-auto align-middle hover:bg-green-600 select-none cursor-pointer">
+              See Playlists
+            </div>
+          </Link>
         </div>
       );
     }

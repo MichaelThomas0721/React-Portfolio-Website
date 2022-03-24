@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-export default function playlist(props) {
+export default function Playlist(props) {
   //get information passed by playlistlist page
   const title = props.title;
   const image = props.image;

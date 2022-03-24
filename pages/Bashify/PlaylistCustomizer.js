@@ -68,7 +68,6 @@ export default function PlaylistList() {
     try {
       const res = await fetch("/api/user");
       const item = await res.json();
-      console.log(item);
       return item;
     } catch (e) {
       console.log(e);
