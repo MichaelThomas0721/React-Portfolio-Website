@@ -1,44 +1,74 @@
 {
   "polyfillFiles": [
-    "static/chunks/polyfills.js"
+    "static/chunks/polyfills-5cd94c89d3acac5f.js"
   ],
-  "devFiles": [
-    "static/chunks/react-refresh.js"
-  ],
-  "ampDevFiles": [
-    "static/chunks/webpack.js",
-    "static/chunks/amp.js"
-  ],
+  "devFiles": [],
+  "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/development/_buildManifest.js",
-    "static/development/_ssgManifest.js",
-    "static/development/_middlewareManifest.js"
+    "static/ecPkZkIqmDXhSiKEygE_i/_buildManifest.js",
+    "static/ecPkZkIqmDXhSiKEygE_i/_ssgManifest.js",
+    "static/ecPkZkIqmDXhSiKEygE_i/_middlewareManifest.js"
   ],
   "pages": {
+    "/": [
+      "static/chunks/webpack-09e03ff669f22d55.js",
+      "static/chunks/framework-5f4595e5518b5600.js",
+      "static/chunks/main-a4d9e436b9a532ca.js",
+      "static/chunks/fb7d5399-ae6009d380f1cd8b.js",
+      "static/chunks/935-f2939b2ab203f8f2.js",
+      "static/css/03d82d14b166774a.css",
+      "static/chunks/pages/index-ea89b095ecbbf47d.js"
+    ],
     "/Bashify": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/Bashify.js"
+      "static/chunks/webpack-09e03ff669f22d55.js",
+      "static/chunks/framework-5f4595e5518b5600.js",
+      "static/chunks/main-a4d9e436b9a532ca.js",
+      "static/chunks/pages/Bashify-c2b6e8ea202cbc15.js"
     ],
     "/Bashify/PlaylistCustomizer": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/Bashify/PlaylistCustomizer.js"
+      "static/chunks/webpack-09e03ff669f22d55.js",
+      "static/chunks/framework-5f4595e5518b5600.js",
+      "static/chunks/main-a4d9e436b9a532ca.js",
+      "static/chunks/pages/Bashify/PlaylistCustomizer-e40e83d9c6215d4e.js"
     ],
     "/Bashify/PlaylistList": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/Bashify/PlaylistList.js"
+      "static/chunks/webpack-09e03ff669f22d55.js",
+      "static/chunks/framework-5f4595e5518b5600.js",
+      "static/chunks/main-a4d9e436b9a532ca.js",
+      "static/chunks/pages/Bashify/PlaylistList-02bebbe076a4616d.js"
+    ],
+    "/RockPaperScissors": [
+      "static/chunks/webpack-09e03ff669f22d55.js",
+      "static/chunks/framework-5f4595e5518b5600.js",
+      "static/chunks/main-a4d9e436b9a532ca.js",
+      "static/chunks/pages/RockPaperScissors-64586d619d1fa478.js"
+    ],
+    "/StreamDeck": [
+      "static/chunks/webpack-09e03ff669f22d55.js",
+      "static/chunks/framework-5f4595e5518b5600.js",
+      "static/chunks/main-a4d9e436b9a532ca.js",
+      "static/chunks/858-489039ea62d831f8.js",
+      "static/css/54461c42b27a28a1.css",
+      "static/chunks/pages/StreamDeck-aba7465bd6ed75ef.js"
+    ],
+    "/WackyWords": [
+      "static/chunks/webpack-09e03ff669f22d55.js",
+      "static/chunks/framework-5f4595e5518b5600.js",
+      "static/chunks/main-a4d9e436b9a532ca.js",
+      "static/chunks/pages/WackyWords-71e6767259788688.js"
     ],
     "/_app": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/_app.js"
+      "static/chunks/webpack-09e03ff669f22d55.js",
+      "static/chunks/framework-5f4595e5518b5600.js",
+      "static/chunks/main-a4d9e436b9a532ca.js",
+      "static/css/26c8e3b517840248.css",
+      "static/chunks/pages/_app-6bbff258708a1c97.js"
     ],
     "/_error": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/_error.js"
+      "static/chunks/webpack-09e03ff669f22d55.js",
+      "static/chunks/framework-5f4595e5518b5600.js",
+      "static/chunks/main-a4d9e436b9a532ca.js",
+      "static/chunks/pages/_error-2280fa386d040b66.js"
     ]
   },
   "ampFirstPages": []

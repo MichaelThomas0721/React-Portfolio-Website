@@ -1,12 +1,19 @@
 {
+  "/Bashify/PlaylistCustomizer": "pages/Bashify/PlaylistCustomizer.html",
+  "/Bashify/PlaylistList": "pages/Bashify/PlaylistList.html",
+  "/Bashify": "pages/Bashify.html",
+  "/RockPaperScissors": "pages/RockPaperScissors.html",
+  "/StreamDeck": "pages/StreamDeck.html",
+  "/WackyWords": "pages/WackyWords.html",
   "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
   "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
+  "/api/createPlaylist": "pages/api/createPlaylist.js",
+  "/api/fillPlaylist": "pages/api/fillPlaylist.js",
   "/api/playlists": "pages/api/playlists.js",
   "/api/songs": "pages/api/songs.js",
-  "/Bashify": "pages/Bashify.js",
   "/api/user": "pages/api/user.js",
-  "/api/createPlaylist": "pages/api/createPlaylist.js",
-  "/api/fillPlaylist": "pages/api/fillPlaylist.js"
+  "/": "pages/index.html",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/404": "pages/404.html"
 }
