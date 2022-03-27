@@ -36,7 +36,7 @@ export default function Home() {
         </p>
         <button
           className="rounded bg-green-500 text-white font-bold w-fit h-fit mt-3 p-3 pl-6 pr-6 m-auto align-middle hover:bg-green-600"
-          onClick={() => signIn({ callbackUrl: 'https://michaelthomastech.ca/Bashify' })}
+          onClick={() => signIn({ callbackUrl: 'https://www.michaelthomastech.ca/Bashify' })}
         >
           Sign in
         </button>
