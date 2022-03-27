@@ -18,7 +18,7 @@ export default function Home() {
             onClick={() => signOut()}
           >
             Sign out
-          </button>{" "}
+          </button>
           <br />
           <Link href="/Bashify/PlaylistList">
             <div className="rounded bg-green-500 text-white font-bold w-fit h-fit mt-3 p-3 pl-6 pr-6 m-auto align-middle hover:bg-green-600 select-none cursor-pointer">
@@ -36,7 +36,7 @@ export default function Home() {
         </p>
         <button
           className="rounded bg-green-500 text-white font-bold w-fit h-fit mt-3 p-3 pl-6 pr-6 m-auto align-middle hover:bg-green-600"
-          onClick={() => signIn()}
+          onClick={() => signIn("spotify", { callbackUrl: 'https://michaelthomastech.ca/Bashify' })}
         >
           Sign in
         </button>
