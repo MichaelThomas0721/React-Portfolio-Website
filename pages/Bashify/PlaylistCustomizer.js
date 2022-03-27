@@ -191,7 +191,7 @@ export default function PlaylistList() {
 
   //This is what the page displays
   return (
-    <div className="bg-black">
+    <div className="">
       <h1 className="text-white text-center text-5xl mt-3">
         Customize Playlist
       </h1>
