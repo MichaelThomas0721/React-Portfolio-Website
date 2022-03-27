@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Playlist from "./../../Components/Playlist";
+import Playlist from "./../../components/Playlist";
 
 export default function PlaylistList() {
   //State for list of playlists
