@@ -15,7 +15,7 @@ export default function Home() {
           </p>
           <button
             className="rounded bg-green-500 text-white font-bold w-fit h-fit mb-10 mt-2 p-3 m-auto align-middle hover:bg-green-600"
-            onClick={() => signOut()}
+            onClick={() => signOut({ callbackUrl: `${window.location.origin}/Bashify` })}
           >
             Sign out
           </button>
@@ -36,7 +36,7 @@ export default function Home() {
         </p>
         <button
           className="rounded bg-green-500 text-white font-bold w-fit h-fit mt-3 p-3 pl-6 pr-6 m-auto align-middle hover:bg-green-600"
-          onClick={() => signIn()}
+          onClick={() => signIn("spotify", { callbackUrl: `${window.location.origin}/Bashify` })}
         >
           Sign in
         </button>
