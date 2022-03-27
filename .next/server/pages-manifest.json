@@ -2,5 +2,11 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/RockPaperScissors": "pages/RockPaperScissors.js"
+  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
+  "/api/playlists": "pages/api/playlists.js",
+  "/api/songs": "pages/api/songs.js",
+  "/Bashify": "pages/Bashify.js",
+  "/api/user": "pages/api/user.js",
+  "/api/createPlaylist": "pages/api/createPlaylist.js",
+  "/api/fillPlaylist": "pages/api/fillPlaylist.js"
 }
