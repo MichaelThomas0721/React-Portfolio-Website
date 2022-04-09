@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { keys } from "./../contrants/keyboardCharacters";
+import { keys } from "./../../contrants/keyboardCharacters";
 
 export default function Keyboard(props) {
   const [test, setTest] = useState(props.keyboardStyling);

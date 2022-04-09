@@ -11,12 +11,12 @@ module.exports = {
         'navWidth' : '100vw',
         'optionsTop' : '450px',
         'pmTop' : '650px',
+        'a4Height' : '296mm',
       },
 
       animation: {
         fade: 'fadeOut 5s ease-in-out',
       },
-
 
       colors: {
         darkGrey: "#222326",
@@ -28,6 +28,14 @@ module.exports = {
         teal: "#23D9A5",
         darkTeal: "#327361",
         offWhite: '#c5c6c7',
+      },
+
+      aspectRatio: {
+        a4: '1 / ' + Math.sqrt(2),
+      },
+
+      screens: {
+        print: {'raw': 'print'},
       },
     },
   },

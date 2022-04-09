@@ -80,7 +80,7 @@ export default function StreamDeck() {
         <meta property="og:title" content="My page title" key="title" />
       </Head>
       <h1 className={styles.WallpaperHeader}>
-        Stream Deck Wallpaper Generator
+        Stream Deck Wallpaper Generator (Under Maintanence)
       </h1>
       <br></br>
       <div className={styles.fileBox}>

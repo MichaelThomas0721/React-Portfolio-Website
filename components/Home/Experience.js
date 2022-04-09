@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import styles from "../styles/experience.module.css";
+import styles from "./../../styles/experience.module.css";
 
 export const Experience = () => {
   const [tabIndicator, setTabIndicator] = useState();

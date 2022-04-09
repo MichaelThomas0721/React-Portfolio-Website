@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Playlist from "./../../components/Playlist";
+import Playlist from "./../../components/Bashify/Playlist";
 
 export default function PlaylistList() {
   //State for list of playlists

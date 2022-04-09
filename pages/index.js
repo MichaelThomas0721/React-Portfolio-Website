@@ -1,13 +1,13 @@
 import styles from "../styles/container.module.css";
-import * as Top from "../components/Top";
-import * as About from "../components/About";
-import * as Education from "../components/Education";
-import * as Experience from "../components/Experience";
-import * as Projects from "../components/Projects";
-import * as Contact from "../components/Contact";
-import * as Footer from "../components/Footer";
-import * as Leftbar from "../components/Leftbar";
-import Navbar from "../components/Navbar";
+import * as Top from "../components/Home/Top";
+import * as About from "../components/Home/About";
+import * as Education from "../components/Home/Education";
+import * as Experience from "../components/Home/Experience";
+import * as Projects from "../components/Home/Projects";
+import * as Contact from "../components/Home/Contact";
+import * as Footer from "../components/Home/Footer";
+import * as Leftbar from "../components/Home/Leftbar";
+import Navbar from "../components/Home/Navbar";
 import Head from "next/head";
 import { useEffect, useRef } from "react";
 

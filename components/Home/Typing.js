@@ -1,5 +1,5 @@
 import { useState, useEffect} from "react";
-import styles from "../styles/typing.module.css";
+import styles from "./../../styles/typing.module.css";
 
 export function Typing(array) {
   const [displayWord, setDisplayWord] = useState("");

@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useRef, useState } from "react";
-import Song from "./../../components/Song";
+import Song from "./../../components/Bashify/Song";
 import { useRouter } from "next/router";
 
 

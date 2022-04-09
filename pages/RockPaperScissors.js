@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-import RpsButton from "./../components/RpsButton";
-import RpsInfo from "./../components/RpsInfo";
+import RpsButton from "./../components/RockPaperScissors/RpsButton";
+import RpsInfo from "./../components/RockPaperScissors/RpsInfo";
 import dynamic from "next/dynamic";
 const Picker = dynamic(() => import("emoji-picker-react"), { ssr: false });
 

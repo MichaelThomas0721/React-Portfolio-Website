@@ -1,4 +1,4 @@
-import styles from "../styles/projects.module.css";
+import styles from "./../../styles/projects.module.css";
 import Image from "next/image";
 
 export const Projects = () => {

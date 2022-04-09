@@ -1,4 +1,4 @@
-import styles from "../styles/education.module.css";
+import styles from "./../../styles/education.module.css";
 
 export const Education = () => {
   const handleOptionChange = () => {

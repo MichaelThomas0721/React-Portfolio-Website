@@ -1,4 +1,4 @@
-import styles from "../styles/leftbar.module.css";
+import styles from "./../../styles/leftbar.module.css";
 
 export const Leftbar = () => {
   return (

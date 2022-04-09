@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useRef } from "react";
-import LetterHolder from "./../components/LetterHolder";
-import InactiveLetterHolder from "./../components/InactiveLetterHolder";
-import CorrectLetterHolder from "./../components/CorrectLetterHolder";
+import LetterHolder from "./../components/WackyWords/LetterHolder";
+import InactiveLetterHolder from "./../components/WackyWords/InactiveLetterHolder";
+import CorrectLetterHolder from "./../components/WackyWords/CorrectLetterHolder";
 import { wordList } from "./../contrants/wordBank";
 import { things } from "./../contrants/answers";
-import Keyboard from "./../components/Keyboard";
+import Keyboard from "./../components/WackyWords/Keyboard";
 import Head from 'next/head'
 
 export default function WackyWords() {
