@@ -1,17 +1,14 @@
-export default function Project(props) {
+export default function Experience(props) {
     return (
         <div>
             <h1 className="text-lg font-semibold">
-                {props.title}
+                {props.position}
             </h1>
             <h2 className="font-light text-sm text-zinc-400">
                 {props.date}
             </h2>
             <p className="text-zinc-600">
                 {props.description}
-            </p>
-            <p className="mt-2 text-sm text-zinc-500">
-                {props.technologies}
             </p>
         </div>
     );

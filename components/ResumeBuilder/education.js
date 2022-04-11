@@ -1,8 +1,8 @@
-export default function Project(props) {
+export default function Education(props) {
     return (
         <div>
             <h1 className="text-lg font-semibold">
-                {props.title}
+                {props.program}
             </h1>
             <h2 className="font-light text-sm text-zinc-400">
                 {props.date}
@@ -11,7 +11,7 @@ export default function Project(props) {
                 {props.description}
             </p>
             <p className="mt-2 text-sm text-zinc-500">
-                {props.technologies}
+                {props.awards}
             </p>
         </div>
     );

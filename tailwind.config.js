@@ -11,7 +11,10 @@ module.exports = {
         'navWidth' : '100vw',
         'optionsTop' : '450px',
         'pmTop' : '650px',
-        'a4Height' : '296mm',
+        'a4Height' : '297mm',
+        'a4Width' : '210mm',
+        'letterHeight' : '279mm',
+        'letterWidth' : '215mm',
       },
 
       animation: {
@@ -32,6 +35,7 @@ module.exports = {
 
       aspectRatio: {
         a4: '1 / ' + Math.sqrt(2),
+        letter: '1/1.2941',
       },
 
       screens: {

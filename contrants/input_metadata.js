@@ -10,9 +10,9 @@ export const CONTACT_METADATA = [
         value: 'occupation',
       },
       {
-        label: 'Address',
+        label: 'Location',
         type: 'text',
-        value: 'address',
+        value: 'location',
       },
       {
         label: 'Phone',
