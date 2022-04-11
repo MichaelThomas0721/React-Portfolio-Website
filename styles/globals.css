@@ -49,6 +49,18 @@
   .drawer-input {
     @apply bg-zinc-500 text-white p-2 m-2 mt-1;
   }
+
+  .resume-line {
+    @apply w-full h-[1px] my-1 bg-zinc-800;
+  }
+
+  .resume-category {
+    @apply font-thin text-2xl mt-2;
+  }
+
+  .resume-list {
+    @apply ml-5 list-disc text-sm;
+  }
 }
 
 :root {

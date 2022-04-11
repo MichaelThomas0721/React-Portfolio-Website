@@ -14,9 +14,9 @@ export default function Resume2() {
       </div>
 
       <div className="mx-10 mt-2">
-        <h2 className="font-thin text-2xl mt-2">Summary</h2>
-        <div className="w-full h-[1px] my-1 bg-zinc-800" />
-        <p>
+        <h2 className="resume-category">Summary</h2>
+        <div className="resume-line" />
+        <p className="text-sm">
           I am seeking a position where I can further develop my skills in this
           highly sought-after industry. I have a portfolio of projects that I
           have created that can be viewed on my GitHub at
@@ -31,40 +31,60 @@ export default function Resume2() {
           to learn would make me a valuable asset to your team.
         </p>
 
-        <h2 className="font-thin text-2xl mt-2">Projects</h2>
-        <div className="w-full h-[1px] my-1 bg-zinc-800" />
+        <h2 className="resume-category">Projects</h2>
+        <div className="resume-line" />
         <h3 className="">
           <b>Wacky Words</b> | React.js, Next.js, TailwindCSS, Javascript
         </h3>
-        <p>
-          Wacky Words is a wordle type game where you have a time limit to guess
-          the word, there is a new word every day but you can also choose to
-          generate a new random word.
-        </p>
+        <ul className="resume-list">
+          <li>
+            Wordle type game where you have 30 seconds to guess the word with
+            letter feedback
+          </li>
+          <li>
+            Optimized and minimized Javascript to reduce load times by 75%
+            resulting in under 0.4s load time
+          </li>
+          <li>
+            Removed unnecessary Javascript and CSS for better performance
+            (100/100 Lighthouse score)
+          </li>
+          <li>
+            Adapted for mobile use by using TailwindCSS to create a responsive
+            design
+          </li>
+        </ul>
 
-        <h2 className="font-thin text-2xl mt-2">Education</h2>
-        <div className="w-full h-[1px] my-1 bg-zinc-800" />
+        <h2 className="resume-category">Education</h2>
+        <div className="resume-line" />
         <h3 className="">
           <b>Computer Programmer Diploma</b> | Algonquin College
         </h3>
         <p className="text-sm text-zinc-500">January 2021 - Present</p>
-        <p>
-          The two-year Computer Programmer Diploma program prepares students for
-          software development. The program teaches object orientated
-          programming, web development, database design and database
-          administration. Dean's List Semester 1 - Present
-        </p>
+        <ul className="resume-list">
+          <li>Two year program preparing students for software development</li>
+          <li>
+            Focused on object oriented programming, web development, database
+            design and database administration
+          </li>
+          <li>Achieved Dean's List Semester 1 - Present</li>
+        </ul>
         <h3 className="">
           <b>High School Diploma</b> | St.Mark High School
         </h3>
         <p className="text-sm text-zinc-500">September 2014 - June 2020</p>
-        <p>
-          Ontario Scholar Award, Honour Certificates for 80% plus average for
-          grades 9-12, 85% average in grade 12
-        </p>
+        <ul className="resume-list">
+          <li>
+            Ontario Scholar Award, Honour Certificates for 80% plus average for
+            grades 9-12
+          </li>
+          <li>
+              Top grade for Computer Science grade 11-12, top grade for communication technologies grade 12
+          </li>
+        </ul>
 
-        <h2 className="font-thin text-2xl mt-2">Experience</h2>
-        <div className="w-full h-[1px] my-1 bg-zinc-800" />
+        <h2 className="resume-category">Experience</h2>
+        <div className="resume-line" />
         <h3 className="">
           <b>Labourer</b> | Sapacon Drywall Limited
         </h3>
@@ -87,8 +107,8 @@ export default function Resume2() {
           operations.
         </p>
 
-        <h2 className="font-thin text-2xl mt-2">Skills</h2>
-        <div className="w-full h-[1px] my-1 bg-zinc-800" />
+        <h2 className="resume-category">Skills</h2>
+        <div className="resume-line" />
         <p>
           <b>Languages: </b> Java, Javascript, Python, C#, C++, COBOL, PHP, SQL
         </p>
