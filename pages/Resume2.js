@@ -2,15 +2,16 @@ export default function Resume2() {
   return (
     <div className="bg-slate-100 print:bg-white h-a4Height w-a4Width m-auto">
       <h1 className="font-bold text-3xl pt-5 text-center">Michael Thomas</h1>
+      <h2 className="text-center text-lg">Ottawa, Ontario</h2>
       <div className="flex items-center justify-center mt-2">
         <img className="w-4 h-4" src="./Images/phoneicon.png" />
         <p className="flex">&nbsp;(613)-807-9187 |&nbsp;</p>{" "}
         <img className="w-4 h-4" src="./Images/mailicon.png" />
         <p>&nbsp;michaelthomas0721@icloud.com |&nbsp; </p>
         <img className="w-4 h-4" src="./Images/linkedinicon.png" />
-        <p>&nbsp;mthomas02 |&nbsp;</p>
+        <a href="https://www.linkedin.com/in/mthomas02/">&nbsp;mthomas02 |&nbsp;</a>
         <img className="w-4 h-4" src="./Images/githubicon.png" />
-        <p>&nbsp;michaelthomas0721&nbsp;</p>
+        <a href="https://www.github.com/MichaelThomas0721">&nbsp;michaelthomas0721&nbsp;</a>
       </div>
 
       <div className="mx-10 mt-2">
@@ -21,28 +22,29 @@ export default function Resume2() {
           highly sought-after industry. I have a portfolio of projects that I
           have created that can be viewed on my GitHub at
           https://github.com/MichaelThomas0721. Additionally, I have personally
-          designed, developed, and deployed a website using Vercel's edge
+          designed, developed, and deployed a website using Vercel&apos;s edge
           network. You can view it along with the source code at
           http://michaelthomastech.ca/. I am very eager to learn new and
-          exciting tools, processes, and best practices in use in today’s
-          fast-paced market. I believe that I can bring youthful exuberance, a
-          creative approach, and a willingness to learn to a team in your
-          organization. My education, my creative personality, and my eagerness
-          to learn would make me a valuable asset to your team.
+          exciting tools, processes, and best practices in use in today&apos;s
+          fast-paced and changing market. I bring youthful exuberance, a creative and collaborative approach,
+          and a willingness to learn to your organization. My
+          education, creative personality, and eagerness to learn would
+          make me a valuable asset to your team.
         </p>
 
         <h2 className="resume-category">Projects</h2>
         <div className="resume-line" />
         <h3 className="">
-          <b>Wacky Words</b> | React.js, Next.js, TailwindCSS, Javascript
+          <b className="font-semibold">Wacky Words</b> | React.js, Next.js,
+          TailwindCSS, Javascript
         </h3>
         <ul className="resume-list">
           <li>
-            Wordle type game where you have 30 seconds to guess the word with
+            Wordle type app where you have 30 seconds to guess the word with
             letter feedback
           </li>
           <li>
-            Optimized and minimized Javascript to reduce load times by 75%
+            Optimized and improved Javascript code quality to reduce load times by 75%
             resulting in under 0.4s load time
           </li>
           <li>
@@ -58,7 +60,8 @@ export default function Resume2() {
         <h2 className="resume-category">Education</h2>
         <div className="resume-line" />
         <h3 className="">
-          <b>Computer Programmer Diploma</b> | Algonquin College
+          <b className="font-semibold">Computer Programmer Diploma</b> |
+          Algonquin College
         </h3>
         <p className="text-sm text-zinc-500">January 2021 - Present</p>
         <ul className="resume-list">
@@ -67,10 +70,11 @@ export default function Resume2() {
             Focused on object oriented programming, web development, database
             design and database administration
           </li>
-          <li>Achieved Dean's List Semester 1 - Present</li>
+          <li>Achieved Dean&apos;s List Semester 1 to Present</li>
         </ul>
         <h3 className="">
-          <b>High School Diploma</b> | St.Mark High School
+          <b className="font-semibold">High School Diploma</b> | St.Mark High
+          School
         </h3>
         <p className="text-sm text-zinc-500">September 2014 - June 2020</p>
         <ul className="resume-list">
@@ -79,14 +83,15 @@ export default function Resume2() {
             grades 9-12
           </li>
           <li>
-              Top grade for Computer Science grade 11-12, top grade for communication technologies grade 12
+            Top grade for Computer Science grade 11-12, top grade for
+            communication technologies grade 12
           </li>
         </ul>
 
         <h2 className="resume-category">Experience</h2>
         <div className="resume-line" />
         <h3 className="">
-          <b>Labourer</b> | Sapacon Drywall Limited
+          <b className="font-semibold">Labourer</b> | Sapacon Drywall Limited
         </h3>
         <p className="text-sm text-zinc-500">
           July - August 2019, June - August 2020, May - August 2021
@@ -97,7 +102,8 @@ export default function Resume2() {
           as required to support the framers, boarders, and tapers
         </p>
         <h3 className="">
-          <b>Backshop Staff</b> | Carleton Golf and Yacht Club
+          <b className="font-semibold">Backshop Staff</b> | Carleton Golf and
+          Yacht Club
         </h3>
         <p className="text-sm text-zinc-500">May 2017 - June 2020</p>
         <p>
@@ -110,14 +116,19 @@ export default function Resume2() {
         <h2 className="resume-category">Skills</h2>
         <div className="resume-line" />
         <p>
-          <b>Languages: </b> Java, Javascript, Python, C#, C++, COBOL, PHP, SQL
+          <b className="font-semibold">Programming Languages: </b> Java, Javascript, Python,
+          C#, C++, COBOL, PHP
         </p>
         <p>
-          <b>Web: </b> React.js, Next.js, HTML/CSS, TailwindCSS
+          <b className="font-semibold">Web Technologies: </b> React.js, Next.js, HTML/CSS,
+          TailwindCSS
         </p>
         <p>
-          <b>Technologies: </b> Spring boot, REST, Apache, NGINX, OracleDB, SQL
-          Server, MySQL, MongoDB, Android
+          <b className="font-semibold">Database Technologies</b> OracleDB, SQL Server, MySQL, MongoDB, SQL, NoSQL
+        </p>
+        <p>
+          <b className="font-semibold">Technologies: </b> Spring boot, REST,
+          Apache, NGINX, Linux, Android, Docker, Kubernetes, Node.js
         </p>
       </div>
     </div>

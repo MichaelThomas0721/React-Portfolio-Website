@@ -5,8 +5,7 @@ import Reference from "./reference";
 
 export default function Resume(props) {
   let color = "#fff";
-
-  let tag = `m-3 mt-10 mb-0 font-bold text-3xl text-center text-white`;
+  let tag = "m-3 mt-10 mb-0 font-bold text-3xl text-center text-white";
 
   return (
     <div className="bg-slate-100 print:bg-white h-a4Height w-a4Width m-auto flex">
@@ -72,10 +71,10 @@ export default function Resume(props) {
           highly sought-after industry. I have a portfolio of projects that I
           have created that can be viewed on my GitHub at
           https://github.com/MichaelThomas0721. Additionally, I have personally
-          designed, developed, and deployed a website using Vercel's edge
+          designed, developed, and deployed a website using Vercel&apos;s edge
           network. You can view it along with the source code at
           http://michaelthomastech.ca/. I am very eager to learn new and
-          exciting tools, processes, and best practices in use in today’s
+          exciting tools, processes, and best practices in use in today&apos;s
           fast-paced market. I believe that I can bring youthful exuberance, a
           creative approach, and a willingness to learn to a team in your
           organization. My education, my creative personality, and my eagerness

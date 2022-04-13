@@ -61,6 +61,7 @@
   .resume-list {
     @apply ml-5 list-disc text-sm;
   }
+
 }
 
 :root {
