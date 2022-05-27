@@ -25,7 +25,7 @@ export default function Navbar() {
           <a href="#experience" className="px-3 text-white hover:text-zinc-400">Experience</a>
           <a href="#projects" className="px-3 text-white hover:text-zinc-400">Projects</a>
           <a href="#contact" className="px-3 text-white hover:text-zinc-400">Contact</a>
-          <a href="/Resume.pdf" className="text-white border-2 p-3 px-6 rounded-xl hover:bg-zinc-700">Resume</a>
+          <a href="/MichaelThomasResume.pdf" className="text-white border-2 p-3 px-6 rounded-xl hover:bg-zinc-700">Resume</a>
         </div>
 
       <div className="md:hidden flex items-center">

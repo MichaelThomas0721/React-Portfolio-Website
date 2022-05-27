@@ -3,7 +3,7 @@ import styles from "./../../styles/leftbar.module.css";
 export const Leftbar = () => {
   return (
     <div className={styles.leftbar}>
-      <a href="/Resume.pdf" id={styles.resumeIcon}><img src="https://img.icons8.com/ios-glyphs/30/ffffff/resume.png"/></a>
+      <a href="/MichaelThomasResume.pdf" id={styles.resumeIcon}><img src="https://img.icons8.com/ios-glyphs/30/ffffff/resume.png"/></a>
       <a href="https://www.linkedin.com/in/michael-thomas-2a0b241b5/">
         <svg
           id={styles.linkedinIcon}

@@ -45,9 +45,10 @@ export const Education = () => {
         </label>
         <div id={styles.postData} className={styles.tab}>
           <h1>Algonquin College</h1>
+          <p>January 2021 - April 2022</p>
           <p>Computer Programming</p>
-          <p>Deans list 3 semesters in a row</p>
-          <p>Expected Graduation April 2022</p>
+          <p>Deans list 4 semesters in a row</p>
+          <p>Graduated April 2022</p>
         </div>
       </div>
     </div>

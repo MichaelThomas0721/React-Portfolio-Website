@@ -90,11 +90,11 @@ export default function Resume(props) {
         <h1 className="text-center text-xl text-cyan-900 font-bold">Education</h1>
         <Education
           program="Computer Programmer Diploma | Algonquin College"
-          date="January 2021 - Present"
+          date="January 2021 - April 2022"
           description="The two-year Computer Programmer Diploma program prepares students for software development. The 
 program teaches object orientated programming, web development, database design and database 
 administration."
-          awards="Dean's List Semester 1 - Present"
+          awards="Dean's List Semester 1 - Graduation, 3.9 GPA"
         />
         <Education
           program="High School Diploma | St.Mark High School"

@@ -1,15 +1,18 @@
-import styles from "../styles/container.module.css";
-import * as Top from "../components/Home/Top";
 import * as About from "../components/Home/About";
+import * as Contact from "../components/Home/Contact";
 import * as Education from "../components/Home/Education";
 import * as Experience from "../components/Home/Experience";
-import * as Projects from "../components/Home/Projects";
-import * as Contact from "../components/Home/Contact";
 import * as Footer from "../components/Home/Footer";
 import * as Leftbar from "../components/Home/Leftbar";
-import Navbar from "../components/Home/Navbar";
-import Head from "next/head";
+import * as Projects from "../components/Home/Projects";
+import * as Top from "../components/Home/Top";
+
 import { useEffect, useRef } from "react";
+
+import Head from "next/head";
+import Navbar from "../components/Home/Navbar";
+import ParticleBackground from "./../components/Home/particleBackground";
+import styles from "../styles/container.module.css";
 
 export default function Home() {
   const navBar = useRef();
@@ -42,9 +45,13 @@ export default function Home() {
           <title>Michael Thomas</title>
           <meta property="og:title" content="My page title" key="title" />
         </Head>
-        <div id="navbar" className="w-full bg-slate-600 fixed transform transition duration-500 ease-in-out shadow-lg z-50">
+        <div
+          id="navbar"
+          className="w-full bg-slate-600 fixed transform transition duration-500 ease-in-out shadow-lg z-50"
+        >
           <Navbar />
         </div>
+        <ParticleBackground />
         {<Leftbar.Leftbar />}
         <section className={[styles.sections, styles.top].join(" ")} id="top">
           {<Top.TopMain />}

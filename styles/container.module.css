@@ -1,5 +1,4 @@
 .grid_container {
-  background: var(--darkGrey);
   display: flex;
   flex-direction: column;
 }

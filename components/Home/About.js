@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import styles from "./../../styles/about.module.css";
 
 export const About = () => {
@@ -9,15 +10,14 @@ export const About = () => {
         <h2 className={styles.aboutParagraph}>
           I am a passionate, hardworking individual who is always looking to
           learn more. <br/>
-          I am in my last semester of Computer Programming at Algonquin College <br/>
+          I am a recent graduate of the Computer Programming Program at Algonquin College <br/>
           <b>Skills:</b>
         </h2>
         <h2 className="text-left w-fit m-auto">
-          o	Languages: Java, Javascript, C#, HTML, CSS, C++, Python, COBOL, PHP, SQL <br/>
-          o	Frameworks and Libraries: React.js, .NET, libGDX, Next.js, Three.js, Tailwind <br/>
-          o	Database Management: OracleDB, SQL Server, MySQL, MongoDB <br/>
-          o	Systems: Linux, Windows, Mac OS, Android <br/>
-          o	Tools and Architectures: Spring boot, REST, VS Code, Apache, Nginx MS Suite, Google Suite, Adobe Suite, Blender, AutoCAD
+          o	Languages: Java, JavaScript, TypeScript, Python, C#, C++, COBOL, PHP <br/>
+          o	Web Technologies: React.js, Next.js, HTML/CSS, TailwindCSS, Node.js, GraphQL, AWS, Strapi <br/>
+          o	Database Technologies OracleDB, SQL Server, MySQL, MongoDB, SQL, NoSQL <br/>
+          o	Technologies: Spring boot, REST, Apache, NGINX, Linux, Android, Docker
         </h2>
       </div>
     </div>

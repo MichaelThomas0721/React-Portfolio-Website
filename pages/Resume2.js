@@ -49,7 +49,7 @@ export default function Resume2() {
           </li>
           <li>
             Removed unnecessary Javascript and CSS for better performance
-            (100/100 Lighthouse score)
+            (98/100 Lighthouse score)
           </li>
           <li>
             Adapted for mobile use by using TailwindCSS to create a responsive
@@ -63,14 +63,15 @@ export default function Resume2() {
           <b className="font-semibold">Computer Programmer Diploma</b> |
           Algonquin College
         </h3>
-        <p className="text-sm text-zinc-500">January 2021 - Present</p>
+        <p className="text-sm text-zinc-500">January 2021 - April 2022</p>
         <ul className="resume-list">
           <li>Two year program preparing students for software development</li>
           <li>
             Focused on object oriented programming, web development, database
             design and database administration
           </li>
-          <li>Achieved Dean&apos;s List Semester 1 to Present</li>
+          <li>Achieved Dean&apos;s List Semester 1 to Graduation</li>
+          <li> Graduated with a 3.9 GPA</li>
         </ul>
         <h3 className="">
           <b className="font-semibold">High School Diploma</b> | St.Mark High
@@ -116,19 +117,19 @@ export default function Resume2() {
         <h2 className="resume-category">Skills</h2>
         <div className="resume-line" />
         <p>
-          <b className="font-semibold">Programming Languages: </b> Java, Javascript, Python,
+          <b className="font-semibold">Languages: </b> Java, JavaScript, TypeScript, Python,
           C#, C++, COBOL, PHP
         </p>
         <p>
           <b className="font-semibold">Web Technologies: </b> React.js, Next.js, HTML/CSS,
-          TailwindCSS
+          TailwindCSS, Node.js, GraphQL, AWS, Strapi
         </p>
         <p>
           <b className="font-semibold">Database Technologies</b> OracleDB, SQL Server, MySQL, MongoDB, SQL, NoSQL
         </p>
         <p>
           <b className="font-semibold">Technologies: </b> Spring boot, REST,
-          Apache, NGINX, Linux, Android, Docker, Kubernetes, Node.js
+          Apache, NGINX, Linux, Android, Docker
         </p>
       </div>
     </div>
