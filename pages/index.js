@@ -52,6 +52,7 @@ export default function Home() {
           <Navbar />
         </div>
         <ParticleBackground />
+        <div className="bg-darkGrey min-h-screen fixed -z-10"></div>
         {<Leftbar.Leftbar />}
         <section className={[styles.sections, styles.top].join(" ")} id="top">
           {<Top.TopMain />}

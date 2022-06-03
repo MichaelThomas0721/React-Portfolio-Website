@@ -15,7 +15,7 @@ export default function ParticleBackground() {
     console.log(container);
   };
   return (
-    <div>
+    <div className="bg-darkGrey fixed -z-10 min-h-screen">
       <Particles
         id="tsparticles"
         init={particlesInit}
@@ -25,7 +25,7 @@ export default function ParticleBackground() {
             color: "#222326"
           },
           particles: {
-            number: { value: 80, density: { enable: true, value_area: 1100 } },
+            number: { value: 30, density: { enable: true, value_area: 1100 } },
             color: { value: "#1fa780" },
             shape: {
               type: "circle",
