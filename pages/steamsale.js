@@ -14,6 +14,8 @@ export default function SteamSale() {
   }, []);
 
   async function FetchSteam() {
+    let dropdown = document.querySelector("select");
+    dropdown.value = num.current + 1;
     let APPID = GetAPPID(saleData.winter2022[num.current][0]);
     const response = await fetch("/api/steamapi", {
       method: "POST",
@@ -53,12 +55,30 @@ export default function SteamSale() {
     return temp2[0];
   }
 
+  function ChangePage(e) {
+    num.current = e.target.value - 1;
+    FetchSteam();
+  }
+
   return (
     <div className="bg-black min-h-screen">
       <div className="flex flex-col">
-        <p className="text-white text-xl">
-          {num.current + 1} of {saleData.winter2022.length}
-        </p>
+        <div className="flex flex-row">
+          <select
+            className="text-xl text-white w-fit bg-slate-600"
+            onChange={(e) => ChangePage(e)}
+          >
+            {saleData.winter2022.map((item, index) => {
+              return (
+                <option value={index + 1} key={`options.${index}`}>
+                  {index + 1}
+                </option>
+              );
+            })}
+          </select>
+          <p className="text-white text-xl">of {saleData.winter2022.length}</p>
+        </div>
+
         <div className="flex flex-row w-fit m-auto">
           <button onClick={Previous}>
             <AiOutlineArrowLeft className="text-white text-4xl" />
@@ -76,7 +96,6 @@ export default function SteamSale() {
       <div className="max-w-7xl m-auto px-12">
         <div className="relative w-1/2 h-96 m-auto">
           <Image
-            //src={data ? data.image : "/autoProject.gif"}
             src={data ? data.header_image : "/autoProject.gif"}
             alt="game image"
             layout="fill"
