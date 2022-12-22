@@ -33,7 +33,7 @@ export default function SteamSale() {
 
   function Next() {
     num.current++;
-    if (num.current > saleData.winter2022.length) {
+    if (num.current > saleData.winter2022.length - 1) {
       num.current = 0;
     }
     FetchSteam();
@@ -42,7 +42,7 @@ export default function SteamSale() {
   function Previous() {
     num.current--;
     if (num.current < 0) {
-      num.current = saleData.winter2022.length;
+      num.current = saleData.winter2022.length - 1;
     }
     FetchSteam();
   }
@@ -84,20 +84,72 @@ export default function SteamSale() {
           />
         </div>
         <p className="text-white text-xl">
-          Price: {data ? data.price_overview.final_formatted : ""}
+          Price:{" "}
+          {data
+            ? data.price_overview
+              ? data.price_overview.final_formatted
+              : ""
+            : ""}
         </p>
         <p className="text-white text-xl">
-          Original Price: {data ? data.price_overview.initial_formatted : ""}
+          Original Price:{" "}
+          {data
+            ? data.price_overview
+              ? data.price_overview.initial_formatted
+              : ""
+            : ""}
         </p>
         <p className="text-white text-xl">
-          Discount: {data ? data.price_overview.discount_percent : ""}%
+          Discount:{" "}
+          {data
+            ? data.price_overview
+              ? data.price_overview.discount_percent
+              : ""
+            : ""}
+          %
         </p>
         <p className="text-white text-xl">
-          Release Date On Steam: {data ? data.release_date.date : ""}
+          Release Date On Steam:{" "}
+          {data ? (data.release_date ? data.release_date.date : "") : ""}
         </p>
-        <a className="text-white text-xl" href={saleData.winter2022[num.current][0]} target="_blank" rel="noopener noreferrer">
+        <a
+          className="text-white text-xl"
+          href={saleData.winter2022[num.current][0]}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           URL
         </a>
+        <br />
+        {saleData.winter2022[num.current][1] ? (
+          <p className="text-white text-xl">
+            Michael&apos;s Description: {saleData.winter2022[num.current][1]}
+          </p>
+        ) : (
+          ""
+        )}
+        {saleData.winter2022[num.current][2] ? (
+          <p className="text-white text-xl">
+            Will I Buy It: {saleData.winter2022[num.current][2]}
+          </p>
+        ) : (
+          ""
+        )}
+        {saleData.winter2022[num.current][3] ? (
+          <p className="text-white text-xl">
+            Michael&apos;s Rating: {saleData.winter2022[num.current][3]}
+          </p>
+        ) : (
+          ""
+        )}
+        {saleData.winter2022[num.current][4] ? (
+          <p className="text-white text-xl">
+            Side Notes: {saleData.winter2022[num.current][4]}
+          </p>
+        ) : (
+          ""
+        )}
+        <br />
         <p
           className="text-white text-xl"
           dangerouslySetInnerHTML={{
