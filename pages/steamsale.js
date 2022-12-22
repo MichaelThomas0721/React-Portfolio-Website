@@ -2,6 +2,7 @@ import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { useEffect, useRef, useState } from "react";
 
 import Image from "next/image";
+import Link from "next/link";
 import saleData from "./api/data.json";
 
 export default function SteamSale() {
@@ -47,7 +48,6 @@ export default function SteamSale() {
   }
 
   function GetAPPID(url) {
-    console.log(url);
     let temp = url.split("/app/");
     let temp2 = temp[1].split("/");
     return temp2[0];
@@ -73,7 +73,7 @@ export default function SteamSale() {
         </div>
       </div>
 
-      <div className="w-fit m-auto">
+      <div className="max-w-7xl m-auto px-12">
         <div className="relative w-1/2 h-96 m-auto">
           <Image
             //src={data ? data.image : "/autoProject.gif"}
@@ -95,25 +95,33 @@ export default function SteamSale() {
         <p className="text-white text-xl">
           Release Date On Steam: {data ? data.release_date.date : ""}
         </p>
+        <a className="text-white text-xl" href={saleData.winter2022[num.current][0]} target="_blank" rel="noopener noreferrer">
+          URL
+        </a>
         <p
           className="text-white text-xl"
           dangerouslySetInnerHTML={{
             __html: data ? data.about_the_game : "Lorem ipsum",
           }}
         ></p>
-        <button className="bg-white p-3 rounded-lg" onClick={FetchSteam}>
-          Fetch Steam
-        </button>
-        <button
-          className="bg-white p-3 rounded-lg"
-          onClick={() =>
-            GetAPPID(
-              "https://store.steampowered.com/app/1222140/Detroit_Become_Human/"
-            )
-          }
-        >
-          Test
-        </button>
+        <p className="pt-12 text-white text-4xl font-bold">LIST OF GAMES</p>
+        {saleData.winter2022.map((item, index) => {
+          return (
+            <>
+              <a
+                className="text-white text-xl"
+                href={item[0]}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={`saledata.${index}`}
+              >
+                {item[0]}
+              </a>
+              <br />
+            </>
+          );
+        })}
+        <p className="pt-12 text-white text-3xl"></p>
       </div>
     </div>
   );
