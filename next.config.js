@@ -5,6 +5,9 @@ const nextConfig = {
   },
   reactStrictMode: true,
   future: { webpack5: true },
+  images: {
+    domains: ['cdn.akamai.steamstatic.com', "localhost"]
+  }
 }
 
 module.exports = nextConfig

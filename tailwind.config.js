@@ -19,6 +19,7 @@ module.exports = {
 
       animation: {
         fade: 'fadeOut 5s ease-in-out',
+        'spin-slow': 'spin 10s linear infinite',
       },
 
       colors: {
@@ -36,6 +37,10 @@ module.exports = {
       aspectRatio: {
         a4: '1 / ' + Math.sqrt(2),
         letter: '1/1.2941',
+      },
+
+      transform: {
+        'rotate-y-180': 'rotateY(180deg)',
       },
 
       screens: {

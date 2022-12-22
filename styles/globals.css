@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 @layer components {
-  .keebExtended{
+  .keebExtended {
     @apply bg-lightGrey rounded-lg w-kbew h-kbrh border-none font-bold text-xl;
   }
-  .keebRegular{
+  .keebRegular {
     @apply bg-lightGrey rounded-lg w-kbrw h-kbrh border-none font-bold text-xl;
   }
   .keebYellow {
@@ -28,7 +28,7 @@
     @apply bg-grey w-lrw h-lrw rounded text-5xl text-center;
   }
 
-  .navItem{
+  .navItem {
     @apply ml-32;
   }
   .navLink {
@@ -39,7 +39,7 @@
     @apply bg-black hover:bg-gray-900 text-3xl w-24 aspect-square rounded-full p-7 text-center shadow-2xl select-none m-4 md:text-6xl md:w-32;
   }
   .pmBtn {
-    @apply  bg-black text-3xl w-24 text-white aspect-square rounded-full text-center shadow-2xl select-none cursor-pointer p-7 m-4 md:text-6xl  md:w-32 ;
+    @apply bg-black text-3xl w-24 text-white aspect-square rounded-full text-center shadow-2xl select-none cursor-pointer p-7 m-4 md:text-6xl  md:w-32;
   }
 
   .drawer-label {
@@ -61,20 +61,19 @@
   .resume-list {
     @apply ml-5 list-disc text-sm;
   }
-
 }
 
 :root {
   --darkGrey: #222326;
-  --grey: #373B40;
-  --lightTeal: #27F2B9;
-  --teal: #23D9A5;
+  --grey: #373b40;
+  --lightTeal: #27f2b9;
+  --teal: #23d9a5;
   --darkTeal: #327361;
   --cardSpacing: -200px;
 
-  --color-red: #ec1840; 
+  --color-red: #ec1840;
   --color-purple: #7a18ec;
-  --color-blue: #66FCF1;
+  --color-blue: #66fcf1;
   --color-white: #fff;
   --color-black-1: #111;
   --color-black-2: #222;
@@ -130,22 +129,42 @@ a {
 }
 
 #particles-js canvas {
-    display: block;
-    vertical-align: bottom;
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-    opacity: 1;
-    -webkit-transition: opacity .8s ease, -webkit-transform 1.4s ease;
-    transition: opacity .8s ease, transform 1.4s ease
+  display: block;
+  vertical-align: bottom;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+  -webkit-transition: opacity 0.8s ease, -webkit-transform 1.4s ease;
+  transition: opacity 0.8s ease, transform 1.4s ease;
 }
 
 #tsparticles {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    background-color: var(--darkGrey);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background-color: var(--darkGrey);
+}
+
+.inner-card {
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .inner-card {
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.front-card,
+.back-card {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.back-card {
+  transform: rotateY(180deg);
 }

@@ -1,7 +1,8 @@
-import { useState, useEffect} from "react";
+import { useEffect, useState } from "react";
+
 import styles from "./../../styles/typing.module.css";
 
-export function Typing(array) {
+export default function Typing() {
   const [displayWord, setDisplayWord] = useState("");
   let wordsState = [
     "Programmer",
